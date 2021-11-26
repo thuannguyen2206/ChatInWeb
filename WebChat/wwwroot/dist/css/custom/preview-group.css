@@ -1,0 +1,96 @@
+﻿body {
+}
+
+.group-detail h6 {
+    margin: 15px 0;
+}
+
+.group-detail h6, .group-name {
+    text-align: center;
+}
+
+.group-detail .group-name {
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #ececec;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.btn-delete {
+    background-color: brown;
+    float: right;
+}
+
+.btn-delete:hover {
+    background-color: crimson;
+}
+
+.group-members {
+    max-height: 400px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.member-name {
+    text-align: center;
+}
+
+.avatar-group {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+}
+
+.avatar-group .badge {
+    position: absolute;
+    top: 30px;
+    right: -15px;
+    padding: 5px 7px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+#input-avatar {
+    display: none;
+}
+
+.invite-member {
+    margin: auto;
+    width: 100%;
+}
+
+#btn-edit-group {
+    margin: 10px auto;
+    background-color: #8FBC8F;
+}
+
+.btn-add-friend {
+    background-color: #000099;
+    float: right;
+}
+
+.btn-add-friend:hover{
+    background-color: #1a1aff;
+}
+
+/* Response screen */
+@media only screen and (max-width: 990px) {
+    .group-detail .group-name {
+        font-size: 20px;
+    }
+
+    .group-members {
+        max-height: 350px;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .group-detail .group-name {
+        max-width: 100%;
+    }
+}
+

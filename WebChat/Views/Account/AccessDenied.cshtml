@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Từ chối truy cập";
+    Layout = "~/Views/Shared/_SignIn-SignUpLayout.cshtml";
+}
+
+
+<div class="main order-md-1">
+    <div class="start">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="content">
+                    <div class="deni-content">
+                        <h2><i class="fa fa-exclamation-triangle text-warning"></i> Lỗi! Không có quyền truy cập.</h2>
+                        <p>
+                            Bạn không có quyền xem trang này. Xin vui lòng
+                            <a asp-controller="Account" asp-action="Login" class="text-secondary font-weight-bold">ĐĂNG NHẬP</a>
+                            vào tài khoản có quyền cao hơn.
+                            <br />
+                            Hoặc, bạn có thể trở về trang chủ.
+                        </p>
+                        <a href="/" class="btn btn-warning font-weight-bold">
+                            <i class="fa fa-arrow-circle-left mr-2"></i>
+                            VỀ TRANG CHỦ
+                        </a>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

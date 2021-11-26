@@ -1,0 +1,143 @@
+﻿@using WebChat.Common.ViewModels.User
+@model List<ContactViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div id="members">
+    <div class="search">
+        <form class="form-inline position-relative">
+            <input type="search" class="form-control" id="people" placeholder="Search for people...">
+            <button type="button" class="btn btn-link loop" id="btn-search-contact"><i class="material-icons">search</i></button>
+        </form>
+        <button class="btn create" data-toggle="modal" data-target="#startnewcontact"><i class="material-icons">person_add</i></button>
+    </div>
+    <div class="list-group sort">
+        <button class="btn filterMembersBtn active show" data-toggle="list" data-filter="all">All</button>
+        <button class="btn filterMembersBtn" data-toggle="list" data-filter="online">Online</button>
+        <button class="btn filterMembersBtn" data-toggle="list" data-filter="offline">Offline</button>
+    </div>
+    <div class="contacts">
+        <h1>Bạn bè</h1>
+        <div class="list-group" id="contacts">
+            @if (Model == null || Model.Count == 0)
+            {
+                <h5>Không có liên lạc nào.</h5>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    var status = item.Status == true ? "online" : "offline";
+                    <a href="#" id="@item.ContactId" class="filterMembers all online contact">
+                        <img class="avatar-md" src="@item.AvatarLink" title="@item.FirstName" alt="avatar">
+                        <div class="status">
+                            <i class="material-icons @status">fiber_manual_record</i>
+                        </div>
+                        <div class="data">
+                            <h5>@item.UserName</h5>
+                            <p>@item.Address</p>
+                        </div>
+                        <div class="person-add">
+                            <i class="material-icons">person</i>
+                        </div>
+                    </a>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#contacts').on('click', 'a', function () {
+            let item = $(this);
+            let id = item.attr('id');
+            if (id !== null) {
+                $.ajax({
+                    url: '@Url.Action("LoadChatForm", "Chat")',
+                    type: 'GET',
+                    cache: false,
+                    data: { contactId: id },
+                    success: function (result) {
+                        if (result != null) {
+                            $('#nav-tabContent').html(result);
+                        }
+                    }
+                });
+            }
+        });
+
+        function SearchContact() {
+            let search = $('#people').val();
+            $.ajax({
+                url: '/Contact/GetListContact',
+                type: 'GET',
+                data: { keyword: search },
+                dataType: 'html',
+                success: function (result) {
+                    $('#side_content').html(result);
+                    $('#people').val(search);
+                }
+            });
+        }
+
+        $('#people').keypress(function (event) {
+            if (event.keyCode === 13 || event.keyCode === 10) {
+                event.preventDefault();
+            }
+        });
+
+        $("#btn-search-contact").off("click").on("click", function () {
+            SearchContact();
+        });
+
+        let contactPageIndex = 1;
+        let isLoadContact = true;
+        $('#sidebar').scroll(function () {
+            if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight - 5) {
+                if ($('#members').hasClass("active") && isLoadContact) {
+                    contactPageIndex += 1;
+                    LoadContact(contactPageIndex);
+                }
+            }
+        });
+
+        function LoadContact(current) {
+            let search = $('#people').val();
+            $.ajax({
+                type: "GET",
+                url: "/Contact/LoadContact",
+                data: { keyword: search, pageIndex: current },
+                dataType: "json",
+                success: function (data) {
+                    if (data.length > 0) {
+                        let html = '';
+                        $(data).each(function (index, item) {
+                            var status = item.Status == true ? "online" : "offline";
+                            html += `<a href="#" id="${item.contactId}" class="filterMembers all online contact">
+                                    <img class="avatar-md" src="${item.avatarLink}" title="${item.firstName}" alt="avatar">
+                                    <div class="status">
+                                        <i class="material-icons ${status}">fiber_manual_record</i>
+                                    </div>
+                                    <div class="data">
+                                        <h5>${item.userName}</h5>
+                                        <p>${item.address != null ? item.address : ""}</p>
+                                    </div>
+                                    <div class="person-add">
+                                        <i class="material-icons">person</i>
+                                    </div>
+                                </a>`;
+                        });
+                        $('#contacts').append(html);
+                    } else {
+                        isLoadContact = false;
+                        contactPageIndex -= 1;
+                    }
+                }
+            });
+        }
+
+    });
+</script>

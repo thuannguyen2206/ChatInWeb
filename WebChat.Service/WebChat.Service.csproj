@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebChat.Common\WebChat.Common.csproj" />
+    <ProjectReference Include="..\WebChat.DataAccess\WebChat.DataAccess.csproj" />
+    <ProjectReference Include="..\WebChat.Entities\WebChat.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,191 @@
+﻿@using WebChat.Common.Utilities.Enums
+@using WebChat.Common.ViewModels.Notification
+@model List<NotificationViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+
+}
+<style>
+    .options {
+        height: 50px;
+    }
+
+    .ignore {
+        background-color: red;
+    }
+</style>
+
+<div id="notifications">
+    <div class="search">
+        <form class="form-inline position-relative">
+            <input type="search" class="form-control" id="notice" placeholder="Filter notifications...">
+            <button type="button" class="btn btn-link loop" id="btn-filter-noti"><i class="material-icons filter-list">filter_list</i></button>
+        </form>
+    </div>
+    <div class="list-group sort">
+        <button class="btn filterNotificationsBtn active show" data-toggle="list" data-filter="all">All</button>
+        <button class="btn filterNotificationsBtn" data-toggle="list" data-filter="latest">Latest</button>
+        <button class="btn filterNotificationsBtn" data-toggle="list" data-filter="oldest">Oldest</button>
+    </div>
+    <div class="notifications">
+        <h1>Thông báo</h1>
+        <div class="list-group" id="alerts">
+            @if (Model == null || Model.Count == 0)
+            {
+                <h5>Bạn chưa có thông báo nào.</h5>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    <div class="noti">
+                        <a href="#" class="filterNotifications all latest notification">
+                            <img class="avatar-md" src="@item.AvatarLink" title="@item.UserName" alt="avatar">
+                            <div class="status">
+                                <i class="material-icons online">fiber_manual_record</i>
+                            </div>
+                            <div class="data">
+                                <p>@item.ContentNotify</p>
+                                <span>@item.TimeSendAsString</span>
+                            </div>
+                        </a>
+                        @if (item.TypeNotify == TypeNotification.NewContact)
+                        {
+                            <div class="options row">
+                                <button type="button" class="btn button col-5 accept" data-senderid="@item.SenderId" data-notificationid="@item.NotificationId">Đồng ý</button>
+                                <div class="col-1"></div>
+                                <button type="button" class="btn button col-5 ignore" data-senderid="@item.SenderId" data-notificationid="@item.NotificationId">Bỏ qua</button>
+                            </div>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // Accept new contact
+        $('#alerts').on('click', '.options .accept', function () {
+            var item = $(this);
+            let senderId = $(this).data("senderid");
+            let notiId = $(this).data("notificationid");
+            if (senderId !== null && notiId !== null) {
+                $.ajax({
+                    url: '/Contact/AcceptNewContact',
+                    type: 'POST',
+                    cache: false,
+                    data: { senderId: senderId, notiId: notiId },
+                    success: function (res) {
+                        if (res.status === true) {
+                            item.closest(".options").siblings().find(".data p").text(res.content);
+                            item.closest(".options").siblings().find(".data span").text(new Date().toLocaleTimeString());
+                            item.closest(".options").remove();
+                        }
+                    }
+                });
+            }
+        });
+
+        // Ignore new contact
+        $('#alerts').on('click', '.options .ignore', function () {
+            var item = $(this);
+            let senderId = $(this).data("senderid");
+            let notiId = $(this).data("notificationid");
+            if (senderId !== null && notiId !== null) {
+                $.ajax({
+                    url: '/Contact/IgnoreNewContact',
+                    type: 'POST',
+                    cache: false,
+                    data: { senderId: senderId, notiId: notiId },
+                    success: function (res) {
+                        if (res === true) {
+                            item.closest(".noti").remove();
+                        }
+                    }
+                });
+            }
+        });
+
+        function FilterNoti() {
+            let search = $('#notice').val();
+            $.ajax({
+                url: '/Notification/GetListNotification',
+                type: 'GET',
+                data: { keyword: search },
+                dataType: 'html',
+                success: function (result) {
+                    $('#side_content').html(result);
+                    $('#notice').val(search);
+                }
+            });
+        }
+
+        $('#notice').keypress(function (event) {
+            if (event.keyCode === 13 || event.keyCode === 10) {
+                event.preventDefault();
+            }
+        });
+
+        $("#btn-filter-noti").off("click").on("click", function () {
+            FilterNoti();
+        });
+
+        let notiPageIndex = 1;
+        let isLoadNoti = true;
+        $('#sidebar').scroll(function () {
+            if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight - 5) {
+                if ($('#notifications').hasClass("active") && isLoadNoti) {
+                    notiPageIndex += 1;
+                    LoadNotification(notiPageIndex);
+                }
+            }
+        });
+
+        function LoadNotification(current) {
+            let search = $('#notice').val();
+            $.ajax({
+                type: "GET",
+                url: "/Notification/LoadNotification",
+                data: { keyword: search, pageIndex: current },
+                dataType: "json",
+                success: function (data) {
+                    if (data.length > 0) {
+                        let html = '';
+                        let btnAcceptIgnore = '';
+                        $(data).each(function (index, item) {
+                            if (item.TypeNotify ==  @TypeNotification.NewContact) {
+                                btnAcceptIgnore = `<div class="options row">
+                                                        <button type="button" class="btn button col-5 accept" data-senderid="${item.senderId}" data-notificationid="${item.notificationId}">Đồng ý</button>
+                                                        <div class="col-1"></div>
+                                                        <button type="button" class="btn button col-5 ignore" data-senderid="${item.senderId}" data-notificationid="${item.notificationId}">Bỏ qua</button>
+                                                    </div>`;
+                            }
+                            html += `<div class="noti">
+                                        <a href="#" class="filterNotifications all latest notification">
+                                            <img class="avatar-md" src="${item.avatarLink}" title="${item.userName}" alt="avatar">
+                                            <div class="status">
+                                                <i class="material-icons online">fiber_manual_record</i>
+                                            </div>
+                                            <div class="data">
+                                                <p>${item.contentNotify}</p>
+                                                <span>${item.timeSendAsString}</span>
+                                            </div>
+                                        </a>
+                                        ${btnAcceptIgnore}
+                                    </div> `;
+                            btnAcceptIgnore = '';
+                        });
+                        $('#alerts').append(html);
+                    } else {
+                        isLoadNoti = false;
+                        notiPageIndex -= 1;
+                    }
+                }
+            });
+        }
+    });
+
+</script>

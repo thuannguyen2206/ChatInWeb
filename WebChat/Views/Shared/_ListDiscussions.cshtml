@@ -1,0 +1,166 @@
+﻿@using WebChat.Common.ViewModels.Discussion
+@model List<DiscussionViewModel>
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+<div id="discussions">
+    <div class="search">
+        <form class="form-inline position-relative">
+            <input type="search" class="form-control" id="conversations" placeholder="Search for conversations...">
+            <button type="button" class="btn btn-link loop" id="btn-search-discussion"><i class="material-icons">search</i></button>
+        </form>
+        <button class="btn create" data-toggle="modal" data-target="#startnewchat"><i class="material-icons">create</i></button>
+    </div>
+    <div class="list-group sort">
+        <button class="btn filterDiscussionsBtn active show" data-toggle="list" data-filter="all">All</button>
+        <button class="btn filterDiscussionsBtn" data-toggle="list" data-filter="read">Read</button>
+        <button class="btn filterDiscussionsBtn" data-toggle="list" data-filter="unread">Unread</button>
+    </div>
+    <div class="discussions">
+        <h1>Trò chuyện</h1>
+        <div class="list-group" id="chats">
+            @if (Model == null || Model.Count == 0)
+            {
+                <h5>Không có tin nhắn nào.</h5>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    <a href="#" id="@item.GroupId" class="filterDiscussions all unread single active">
+                        <img class="avatar-md" src="@item.AvatarDiscussion" title="@item.NameDiscussion" alt="avatar">
+                        <div class="status">
+                            <i class="material-icons online">fiber_manual_record</i>
+                        </div>
+                        @if (item.Notification > 0)
+                        {
+                            <div class="new bg-red">
+                                <span>@item.NotificationAsString</span>
+                            </div>
+                        }
+                        <div class="data">
+                            <h5 title="@item.NameDiscussion">@item.NameDiscussion</h5>
+                            <span>@item.TimeSentAsString</span>
+                            <p>@item.ShortMessage</p>
+                        </div>
+                    </a>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#chats').on('click', 'a', function () {
+            let item = $(this);
+            let id = item.attr("id");
+
+            if (id !== null) {
+                $.when(
+                    $.ajax({
+                        url: '@Url.Action("LoadChatForm2", "Chat")',
+                        type: 'GET',
+                        cache: false,
+                        data: { groupId: id },
+                        success: function (result) {
+                            if (result != null) {
+                                $('#nav-tabContent').html(result);
+                            }
+                        }
+                    }),
+                    $.ajax({
+                        url: '@Url.Action("DeleteWhenRead", "Notification")',
+                        type: 'POST',
+                        cache: false,
+                        data: { groupId: id },
+                        success: function (result) {
+                            if (result === true) {
+                                item.children('.new').remove();
+                            }
+                        }
+                    })
+                ).then(function (res1, res2) {
+                    $('#nav-tabContent').html(res1);
+                    if (res2 === true) {
+                        item.children('.new').remove();
+                    }
+                });
+            }
+
+        });
+
+        function SearchDiscussion() {
+            let search = $('#conversations').val();
+            $.ajax({
+                url: '/Discussion/GetListDiscussion',
+                type: 'GET',
+                data: { keyword: search },
+                dataType: 'html',
+                success: function (result) {
+                    $('#side_content').html(result);
+                    $('#conversations').val(search);
+                }
+            });
+        }
+
+        $('#conversations').keypress(function (event) {
+            if (event.keyCode === 13 || event.keyCode === 10) {
+                event.preventDefault();
+            }
+        });
+
+        $("#btn-search-discussion").off("click").on("click", function () {
+            SearchDiscussion();
+        });
+
+        let discussionPageIndex = 1;
+        let isLoadDiscussion = true;
+        $('#sidebar').scroll(function () {
+            if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight - 5) {
+                if ($('#discussions').hasClass("active") && isLoadDiscussion) {
+                    discussionPageIndex += 1;
+                    LoadDiscussion(discussionPageIndex);
+                }
+            }
+        });
+
+        function LoadDiscussion(current) {
+            let search = $('#conversations').val();
+            $.ajax({
+                type: "GET",
+                url: "/Discussion/LoadDiscussion",
+                data: { keyword: search, pageIndex: current },
+                dataType: "json",
+                success: function (data) {
+                    if (data.length > 0) {
+                        let html = '';
+                        $(data).each(function (index, item) {
+                            var noti = item.notification > 0 ? `<div class="new bg-red"><span>${item.notificationAsString}</span></div>` : "";
+                            html += `<a href="#" id="${item.groupId}" class="filterDiscussions all unread single active">
+                                        <img class="avatar-md" src="${item.avatarDiscussion}" title="${item.nameDiscussion}" alt="avatar">
+                                        <div class="status">
+                                            <i class="material-icons online">fiber_manual_record</i>
+                                        </div>
+                                        ${noti}
+                                        <div class="data">
+                                            <h5 title="${item.nameDiscussion}">${item.nameDiscussion}</h5>
+                                            <span>${item.timeSentAsString}</span>
+                                            <p>${item.shortMessage}</p>
+                                        </div>
+                                    </a>`;
+                        });
+                        $('#chats').append(html);
+                    } else {
+                        isLoadDiscussion = false;
+                        discussionPageIndex -= 1;
+                    }
+                }
+            });
+        }
+    });
+
+</script>
+

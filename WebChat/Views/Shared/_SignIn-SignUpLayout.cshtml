@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>WebChat - @ViewData["Title"]</title>
+    <meta name="description" content="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/lib/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <!-- Swipe core CSS -->
+    <link href="/dist/css/swipe.min.css" type="text/css" rel="stylesheet">
+    <!-- Favicon -->
+    <link href="/dist/img/favicon.png" type="image/png" rel="icon">
+</head>
+<body class="start">
+    <main>
+        <div class="layout">
+            @RenderBody()
+        </div> <!-- Layout -->
+    </main>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/dist/js/jquery.min.js"></script>
+    @*<script>window.jQuery || document.write('<script src="/dist/js/vendor/jquery-slim.min.js"><\/script>')</script>*@
+    <script src="/dist/js/vendor/popper.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    @await Component.InvokeAsync("Notyf")
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿@model WebChat.Common.ViewModels.Account.LoginViewModel;
+@{
+    Layout = "~/Views/Shared/_SignIn-SignUpLayout.cshtml";
+    ViewData["Title"] = "Login";
+}
+
+<!-- Start of Sign In -->
+<div class="main order-md-1">
+    <div class="start">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="content">
+                    <h1>Đăng nhập với WebChat</h1>
+                    <div class="third-party">
+                        <button class="btn item bg-blue">
+                            <i class="material-icons">pages</i>
+                        </button>
+                        <button class="btn item bg-teal">
+                            <i class="material-icons">party_mode</i>
+                        </button>
+                        <button class="btn item bg-purple">
+                            <i class="material-icons">whatshot</i>
+                        </button>
+                    </div>
+                    <p>or use your email account:</p>
+                    <form asp-controller="Account" asp-action="Login" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <input type="text" asp-for="Username" class="form-control" placeholder="Tài khoản" autocomplete="off">
+                            <button class="btn icon"><i class="material-icons">person_outline</i></button>
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" asp-for="Password" class="form-control" placeholder="Mật khẩu">
+                            <button class="btn icon"><i class="material-icons">lock_outline</i></button>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn button">Đăng nhập</button>
+                        <div class="callout">
+                            <span>Bạn chưa có tài khoản? <a asp-action="Register" asp-controller="Account">Đăng kí ngay</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Sign In -->
+<!-- Start of Sidebar -->
+<div class="aside order-md-2">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="preference">
+                <h2>Hello, Friend!</h2>
+                <p>Enter your personal details and start your journey with WebChat today.</p>
+                <a asp-action="Register" asp-controller="Account" class="btn button">Đăng kí</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Sidebar -->

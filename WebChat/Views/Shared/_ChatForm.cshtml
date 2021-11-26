@@ -1,0 +1,565 @@
+﻿@using WebChat.Common.ViewModels.Chat
+@using WebChat.Common.Utilities.Constants
+
+@{
+    var chatGroup = (ChatGroupViewModel)ViewData["ChatGroup"];
+
+    var chatLogs = (List<ChatLogViewModel>)ViewData["ChatLogs"];
+
+    Guid me = new Guid();
+    if (chatGroup != null)
+    {
+        me = (Guid)ViewData["Me"] != null ? (Guid)ViewData["Me"] : Guid.Empty;
+    }
+}
+
+<style>
+    .emojionearea > .emojionearea-editor {
+        min-height: 20px;
+        max-height: 35px;
+    }
+
+    .emojionearea-button {
+        position: absolute;
+        top: 17px !important;
+        left: 10px !important;
+    }
+
+    .emojionearea .emojionearea-picker {
+        position: absolute;
+        top: -10px !important;
+        left: 10px !important;
+    }
+
+    .text span b {
+        color: cadetblue;
+    }
+</style>
+
+<!-- Start of Babble -->
+<div class="babble tab-pane fade active show" id="list-chat">
+    <!-- Start of Chat -->
+    <div class="chat" id="chat1">
+        <div class="top">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="inside">
+                        <a href="#"><img class="avatar-md" src="@chatGroup.AvatarLink" title="@chatGroup.Name" alt="avatar"></a>
+                        <div class="status">
+                            <i class="material-icons online">fiber_manual_record</i>
+                        </div>
+                        <div class="data">
+                            <h5><a href="#" id="group-detail">@chatGroup.Name</a></h5>
+                            <span>Active now</span>
+                        </div>
+                        <button class="btn connect d-md-block d-none" name="1"><i class="material-icons md-30">phone_in_talk</i></button>
+                        <button class="btn connect d-md-block d-none" name="1"><i class="material-icons md-36">videocam</i></button>
+                        <button class="btn d-md-block d-none"><i class="material-icons md-30">info</i></button>
+                        <div class="dropdown">
+                            <button class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons md-30">more_vert</i></button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <button class="dropdown-item connect" name="1"><i class="material-icons">phone_in_talk</i>Voice Call</button>
+                                <button class="dropdown-item connect" name="1"><i class="material-icons">videocam</i>Video Call</button>
+                                <hr>
+                                @if (chatGroup.TotalMember == 2 && chatGroup.OwnerId == null)
+                                {
+                                    if (chatGroup.IsBlock)
+                                    {
+                                        <button id="btn-unblock" class="dropdown-item"><i class="material-icons">block</i>Bỏ chặn</button>
+                                    }
+                                    else
+                                    {
+                                        <button id="btn-block" class="dropdown-item"><i class="material-icons">block</i>Chặn</button>
+                                    }
+                                    <button id="btn-unfriend" class="dropdown-item"><i class="material-icons">clear</i>Hủy kết bạn</button>
+                                }
+                                else
+                                {
+                                    <button id="btn-delete-group" class="dropdown-item">
+                                        <i class="material-icons">delete</i>
+                                        @(chatGroup.IsOwner ? "Xóa nhóm chat" : "Rời nhóm")
+                                    </button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @if (chatLogs == null || chatLogs.Count == 0)
+        {
+            <div class="content empty" id="content">
+                <div class="container">
+                    <div class="col-md-12 chat-content">
+                        <div class="no-messages">
+                            <i class="material-icons md-48">forum</i>
+                            <p>Hãy bắt đầu kết nối với mọi người xung quanh.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="content" id="content">
+                <div class="container">
+                    <div class="col-md-12 chat-content">
+                        @foreach (var item in chatLogs)
+                        {
+                            if (item.SenderId == me)
+                            {
+                                <div class="message me">
+                                    <div class="text-main">
+                                        <div class="text-group me">
+                                            <div class="text me">
+                                                @if (item.AttachedFile != null)
+                                                {
+                                                    if (item.TypeFile == 2)
+                                                    { // video
+                                                        <video width="320" height="240" controls>
+                                                            <source src="@item.AttachedFile">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    }
+                                                    else if (item.TypeFile == 1)
+                                                    { // image
+                                                        <img src="@item.AttachedFile" alt="Image" width="200" height="200">
+                                                    }
+                                                    else
+                                                    { // file
+                                                        <div class="attachment">
+                                                            <button class="btn attach"><i class="material-icons md-18">insert_drive_file</i></button>
+                                                            <div class="file">
+                                                                <h5><a href="@item.AttachedFile">@item.FileName</a></h5>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <p>@item.Content</p>
+                                                }
+                                            </div>
+                                        </div>
+                                        @if ((DateTime.Now - item.TimeSent).TotalMinutes > 10)
+                                        {
+                                            <span>@item.TimeSentAsString</span>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="message">
+                                    <img class="avatar-md" src="@item.AvatarLink" title="@item.UserName" alt="avatar">
+                                    <div class="text-main">
+                                        <div class="text-group">
+                                            <div class="text">
+                                                <span><b>@item.UserName</b></span>
+                                                @if (item.AttachedFile != null)
+                                                {
+                                                    if (item.TypeFile == 2)
+                                                    { // video
+                                                        <video width="320" height="240" controls>
+                                                            <source src="@item.AttachedFile">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    }
+                                                    else if (item.TypeFile == 1)
+                                                    { // image
+                                                        <img src="@item.AttachedFile" alt="image" width="200" height="200">
+                                                    }
+                                                    else
+                                                    { // file
+                                                        <div class="attachment">
+                                                            <button class="btn attach"><i class="material-icons md-18">insert_drive_file</i></button>
+                                                            <div class="file">
+                                                                <h5><a href="@item.AttachedFile">@item.FileName</a></h5>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <p>@item.Content</p>
+                                                }
+                                            </div>
+                                        </div>
+                                        @if ((DateTime.Now - item.TimeSent).TotalMinutes > 10)
+                                        {
+                                            <span>@item.TimeSentAsString</span>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="container">
+            <div class="col-md-12">
+                <div class="bottom">
+                    <form class="position-relative w-100">
+                        <textarea id="message" class="form-control" placeholder="Start typing for reply..." rows="1"></textarea>
+                        <button id="btn-send-message" type="button" class="btn send"><i class="material-icons">send</i></button>
+                    </form>
+                    <label>
+                        <input id="attached-file" type="file" class="form-control">
+                        <span class="btn attach d-sm-block d-none"><i class="material-icons">attach_file</i></span>
+                    </label>
+                    <div class="hidden-field" style="display:none">
+                        <input type="hidden" id="chatGroupId" value="@chatGroup.Id" />
+                        <input type="hidden" id="me" value="@me" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Chat -->
+    <!-- Start of Call -->
+    <div class="call" id="call1">
+        <div class="content">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="inside">
+                        <div class="panel">
+                            <div class="participant">
+                                <img class="avatar-xxl" src="@chatGroup.AvatarLink" alt="avatar">
+                                <span>Connecting</span>
+                            </div>
+                            <div class="options">
+                                <button class="btn option"><i class="material-icons md-30">mic</i></button>
+                                <button class="btn option"><i class="material-icons md-30">videocam</i></button>
+                                <button class="btn option call-end"><i class="material-icons md-30">call_end</i></button>
+                                <button class="btn option"><i class="material-icons md-30">person_add</i></button>
+                                <button class="btn option"><i class="material-icons md-30">volume_up</i></button>
+                            </div>
+                            <button class="btn back" name="1"><i class="material-icons md-24">chat</i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Call -->
+</div>
+<!-- End of Babble -->
+
+
+<script>
+    $(document).ready(function () {
+        (function ($) {
+            $('#content').scrollTop($('#content')[0].scrollHeight);
+            $('#message').focus();
+        })(jQuery);
+
+        $('#btn-send-message').unbind('click').click(function (event) {
+            event.preventDefault();
+            SendMessage(event);
+        });
+
+        function SendMessage(event) {
+            let message = $('#message').val();
+            if (message !== null && message !== "") {
+                try {
+                    let request = {};
+                    request.UserId = '@me';
+                    request.ConnectionId = '';
+                    let chatData = {};
+                    chatData.ChatGroupId = '@chatGroup.Id';
+                    chatData.Message = message;
+                    request.Data = chatData;
+
+                    connection.invoke("SendMessage", request);
+                    $('#message').val('').focus();
+                    $('.emojionearea .emojionearea-editor').text('').focus();
+                }
+                catch (e) {
+                    console.error(e.toString());
+                }
+            }
+        }
+
+        // Emoji
+        $('#message').emojioneArea({
+            pickerPosition: "top",
+            search: false
+        });
+
+        $('#attached-file').on('change', function (e) {
+            //let file = e.target.files;
+            let file = $('#attached-file').get(0).files;
+            if (file.length > 0) {
+                if (file[0].size > @SystemConstant.MaximumSizeFile) {
+                     swal({
+                         title: "Ohh no! File quá lớn",
+                         text: "Dung lượng file tối đa có thể gửi là 20Mb!",
+                         icon: "error"
+                     });
+                    //e.target.value = "";
+                    $('#attached-file')[0].value = ''; // Reset file value
+                } else {
+                     SendAFile(file);
+                }
+            }
+        });
+
+        function SendAFile(file) {
+            let fd = new FormData();
+            fd.append("uploadfile", file[0]);
+            fd.append("userid", '@me');
+            fd.append("groupid", '@chatGroup.Id');
+            if (file !== null && file.length > 0) {
+                try {
+                    $.ajax({
+                        url: '/Chat/SendFile',
+                        data: fd,
+                        processData: false,
+                        contentType: false,
+                        type: 'POST',
+                        success: function (res) {
+                            //console.log("Response send file: " + res)
+                        }
+                    });
+                    $('.emojionearea .emojionearea-editor').focus();
+                }
+                catch (e) {
+                    console.error(e.toString());
+                }
+            }
+        }
+
+        var chatPageIndex = 1;
+        var isLoadMessage = true;
+        $("#content").scrollTop($("#content")[0].scrollHeight);
+        $('#content').scroll(function () {
+            if ($('#content').scrollTop() == 0 && isLoadMessage) {
+                chatPageIndex += 1;
+                LoadMessage(chatPageIndex);
+            }
+        });
+
+        function LoadMessage(current) {
+            let groupId = $('.hidden-field #chatGroupId').val();
+            $.ajax({
+                type: "GET",
+                url: "/Chat/LoadMessage",
+                data: { groupId: groupId, pageIndex: current },
+                dataType: "json",
+                success: function (response) {
+                    if (response.length > 0) {
+                        let html = '';
+                        let content = '';
+                        $(response).each(function (index, val) {
+                            if (val.attachedFile != null) {
+                                if (val.typeFile === 2) { // video
+                                    content = `<video width="320" height="240" controls>
+                                                 <source src="${val.attachedFile}">
+                                                 Your browser does not support the video tag.
+                                               </video>`;
+                                }
+                                else if (val.typeFile === 1) { // image
+                                    content = `<img src="${val.attachedFile}" alt="Image" width="200" height="200">`;
+                                }
+                                else { // file
+                                    content = `<div class="attachment">
+										           <button class="btn attach"><i class="material-icons md-18">insert_drive_file</i></button>
+										           <div class="file">
+                                                      <h5><a href="${val.attachedFile}">${val.fileName}</a></h5>
+                                                   </div>
+										       </div>`;
+                                }
+                            } else {
+                                content = `<p>${val.content}</p>`;
+                            }
+
+                            if (val.senderId === '@me') {
+                                html += `<div class="message me">
+                                         <div class="text-main">
+                                             <div class="text-group me">
+                                                 <div class="text me">
+                                                     ${content}
+                                                 </div>
+                                             </div>
+                                             <span>${val.timeSentAsString}</span>
+                                         </div>
+                                     </div>`;
+                                content = '';
+                            }
+                            else {
+                                html += `<div class="message">
+                                             <img class="avatar-md" src="${val.avatarLink}" title="${val.userName}" alt="avatar">
+                                             <div class="text-main">
+                                                 <div class="text-group">
+                                                     <div class="text">
+                                                         <span><b>${val.userName}</b></span>
+                                                         ${content}
+                                                     </div>
+                                                 </div>
+                                                 <span>${val.timeSentAsString}</span>
+                                             </div>
+                                         </div>`;
+                                content = '';
+                            }
+                        });
+                        $('#content .container .chat-content').prepend(html);
+                        $('#content').animate({ scrollTop: 10 }, 300);
+                    } else {
+                        isLoadMessage = false;
+                        chatPageIndex -= 1;
+                    }
+                }
+            });
+        }
+
+        $("#chat1").on("click", ".text", function () {
+            var src = $(this).children("img").attr('src');
+            if (src != null && src.length > 0) {
+                var val = "/Chat/Download?filePath=" + src;
+                $("#image-download").attr("href", val);
+
+                $('.image-preview').attr('src', src);
+                $('#image-modal').modal('show');
+            }
+        });
+
+        $('#chat1').on("click", "#group-detail", function () {
+            let groupId = $('.hidden-field #chatGroupId').val();
+            if (groupId != null) {
+                $.ajax({
+                    url: '/Discussion/DiscussionDetail',
+                    type: 'GET',
+                    data: { groupId: groupId },
+                    dataType: 'json',
+                    success: function (res) {
+                        if (res.status === true) {
+                            $('#group-modal').html(res.html.result);
+                            $('#group-modal').modal('show');
+                        }
+                    }
+                });
+            }
+        });
+
+        $("#chat1").on("click", "#btn-unfriend", function () {
+            let contactName = $("#group-detail").text();
+            swal({
+                title: `Hủy kết bạn với ${contactName}?`,
+                text: "Tuy cả 2 sẽ không còn là bạn bè nhưng đoạn tin nhắn vẫn còn và có thể tiếp tục liên lạc với nhau!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((result) => {
+                if (result) {
+                    let groupId = $('.hidden-field #chatGroupId').val();
+                    $.ajax({
+                        url: '/Contact/Unfriend',
+                        type: 'POST',
+                        data: { groupId: groupId },
+                        dataType: 'json',
+                        success: function (res) { }
+                    });
+                }
+            });
+        });
+
+        $("#chat1").on("click", "#btn-block", function () {
+            let contactName = $("#group-detail").text();
+            let groupId = $('.hidden-field #chatGroupId').val();
+
+            swal({
+                title: `Bạn muốn chặn ${contactName}?`,
+                text: `Nếu bị chặn thì ${contactName} sẽ không thể liên lạc với bạn nữa!`,
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((result) => {
+                if (result) {
+                    $.ajax({
+                        url: "/Contact/BlockFriend",
+                        type: 'POST',
+                        data: { groupId: groupId },
+                        dataType: 'json',
+                        success: function (res) {
+                            if (res === true) {
+                                if ($("#btn-block").length > 0) {
+                                    $("#btn-block").remove();
+                                    $("#btn-unfriend").before('<button id="btn-unblock" class="dropdown-item"><i class="material-icons">block</i>Bỏ chặn</button>');
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+        });
+
+        $("#chat1").on("click", "#btn-unblock", function () {
+            let contactName = $("#group-detail").text();
+            let groupId = $('.hidden-field #chatGroupId').val();
+
+            swal({
+                title: `Bạn sẽ bỏ chặn đối với ${contactName}?`,
+                text: `Nếu bạn đồng ý thì từ giờ ${contactName} sẽ có thể liên lạc với bạn như bình thường!`,
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((result) => {
+                if (result) {
+                    $.ajax({
+                        url: "/Contact/UnBlockFriend",
+                        type: 'POST',
+                        data: { groupId: groupId },
+                        dataType: 'json',
+                        success: function (res) {
+                            if (res === true) {
+                                if ($("#btn-unblock").length > 0) {
+                                    $("#btn-unblock").remove();
+                                    $("#btn-unfriend").before('<button id="btn-block" class="dropdown-item"><i class="material-icons">block</i>Chặn</button>');
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+        });
+
+        $("#chat1").on("click", "#btn-delete-group", function () {
+            let groupName = $("#group-detail").text();
+            let groupId = $('.hidden-field #chatGroupId').val();
+            let titleAlert = '', textAlert = '', url = '';
+            if (@chatGroup.IsOwner.ToString().ToLower() === true) {
+                titleAlert = `Bạn có chắc muốn xóa nhóm ${groupName}?`;
+                textAlert = "Hãy cân nhắc hành động này, nếu bạn xác nhận thì toàn bộ dữ liệu của nhóm sẽ bị xóa và không thể khôi phục lại được!";
+                url = "/Discussion/RemoveDiscussion";
+            }
+            else {
+                titleAlert = `Bạn muốn rời nhóm ${groupName}?`;
+                textAlert = "Bạn sẽ không thể tiếp tục nhắn tin với nhóm nếu bạn xác nhận rời khỏi nhóm!";
+                url = "/Discussion/LeaveDiscussion";
+            }
+
+            swal({
+                title: titleAlert,
+                text: textAlert,
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((result) => {
+                if (result) {
+                    $.ajax({
+                        url: url,
+                        type: 'POST',
+                        data: { groupId: groupId },
+                        dataType: 'json',
+                        success: function (res) { }
+                    });
+                }
+            });
+        });
+    });
+</script>

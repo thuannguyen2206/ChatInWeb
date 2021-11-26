@@ -1,0 +1,185 @@
+﻿@model WebChat.Common.ViewModels.Discussion.DiscussionDetailViewModel
+
+<div class="modal-dialog modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" title="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="group-info">
+                <form asp-action="UpdateDiscussion" asp-controller="Discussion" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input hidden type="text" asp-for="GroupId" />
+                    </div>
+                    <div class="row">
+                        <div class="group-detail col-md-7">
+                            <div class="avatar-group">
+                                <img class="avatar-xl" id="avatar-upload-preview" src="@Model.GroupAvatar" alt="avatar">
+                                <label class="badge" title="Chỉnh sửa">
+                                    <input type="file" asp-for="AvatarFile" id="input-avatar" accept=".jpg, .png, .gif, .jpeg">
+                                    <span class="material-icons">edit</span>
+                                </label>
+                            </div>
+                            <h6>@Model.TotalMember thành viên</h6>
+                            <input type="text" asp-for="GroupName" class="group-name" />
+                        </div>
+                        <div class="invite-member col-md-5">
+                            <label>Thêm thành viên cho nhóm:</label>
+                            <select multiple type="text" asp-for="ListInviteMemberIds" class="form-control" style="width:100%;" id="select-members"></select>
+                        </div>
+                        <button type="submit" class="btn btn-outline-light" id="btn-edit-group">Lưu thay đổi</button>
+                    </div>
+                </form>
+                <div class="group-members">
+                    <p>Thành viên của nhóm:</p>
+                    <table class="table table-hover">
+                        <tbody>
+                            @foreach (var item in Model.ListMembers)
+                            {
+                                var isOwner = Model.OwnerId == item.Id ? " (Owner)" : "";
+                                <tr>
+                                    <td><img class="avatar-md" src="@item.AvatarLink" title="@item.Username" alt="avatar" /></td>
+                                    <td class="member-name" title="@item.Address">@item.Username<b>@isOwner</b></td>
+                                    <td>
+                                        @if (!item.IsFriend)
+                                        {
+                                            <a href="#" data-contactid="@item.Id" class="btn btn-primary btn-add-friend">Kết bạn</a>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (Model.UserId == Model.OwnerId && item.Id != Model.OwnerId)
+                                        {
+                                            <a href="#" data-memberid="@item.Id" class="btn btn-danger btn-delete">Xóa khỏi nhóm</a>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // Preview upload image
+        $('#input-avatar').off("change").on("change", function () {
+            let input = this;
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#avatar-upload-preview').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            };
+        });
+
+        // select2 to get list users are not this group member
+        let groupId = $('.hidden-field #chatGroupId').val();
+        $("#select-members").select2({
+            language: 'vi',
+            placeholder: 'Tìm thành viên mới',
+            ajax: {
+                url: '/Discussion/GetListToAddMember',
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        keyword: params.term,
+                        page: params.page || 1,
+                        groupId: groupId
+                    };
+                },
+                processResults: function (data, page) {
+                    return {
+                        pagination: {
+                            more: (data.length > 0) ? true : false
+                        },
+                        results: $.map(data, function (item) {
+                            return {
+                                id: item.contactId,
+                                text: item.userName,
+                                html: '<div><img src="' + item.avatarLink + '" class="avatar-md" /> ' + item.userName + '</div>',
+                            };
+                        })
+                    };
+                }
+            },
+            templateResult: function (data) {
+                return data.html;
+            },
+            escapeMarkup: function (m) {
+                return m;
+            }
+        });
+
+        $(".group-members").on("click", ".btn-add-friend", function () {
+            let contactId = $(this).data('contactid');
+            AddContact(contactId, ""); //new-contact.js
+        });
+
+        $(".group-members").on("click", ".btn-delete", function () {
+            let item = $(this);
+            let memberId = item.data('memberid');
+            $.ajax({
+                type: "POST",
+                url: "/Discussion/RemoveMember",
+                data: { groupId: groupId, memberId: memberId },
+                dataType: "json",
+                success: function (res) {
+                    let getMember = $(".group-detail h6").text().split(" ")[0];
+                    let setMember = parseInt(getMember) - 1;
+                    if (res === true) {
+                        item.closest("tr").remove();
+                        $(".group-detail h6").text(setMember + " thành viên");
+                    }
+                }
+            });
+        });
+
+        let memberPageIndex = 1;
+        let isLoadMember = true;
+        $('.group-members').scroll(function () {
+            if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight - 2) {
+                if (isLoadMember) {
+                    memberPageIndex += 1;
+                    LoadMember(memberPageIndex);
+                }
+            }
+        });
+
+        function LoadMember(current) {
+            $.ajax({
+                type: "GET",
+                url: "/Discussion/LoadMembers",
+                data: { groupId: groupId, pageIndex: current },
+                dataType: "json",
+                success: function (data) {
+                    if (data.status === true) {
+                        let html = '', btnDel = '', btnAddFriend = '';
+                        $(data.result.listMembers).each(function (index, item) {
+                            if (!item.isFriend) {
+                                btnAddFriend = `<a href="#" data-contactid="${item.id}" class="btn btn-primary btn-add-friend">Kết bạn</a>`;
+                            }
+                            if (data.result.userId === data.result.ownerId && item.id !== data.result.ownerId)
+                            {
+                                btnDel = `<a href="#" data-memberid="${item.id}" class="btn btn-danger btn-delete">Xóa khỏi nhóm</a>`;
+                            }
+                            html += `<tr>
+                                        <td><img class="avatar-md" src="${item.avatarLink}" title="${item.username}" alt="avatar"></td>
+                                        <td class="member-name" title="${item.address}">${item.username}<b>${data.result.ownerId == item.id ? " (Owner)" : ""}</b></td>
+                                        <td>${btnAddFriend}</td>
+                                        <td>${btnDel}</td>
+                                     </tr>`;
+                            btnDel = ''; btnAddFriend = '';
+                        });
+                        $('.group-members .table tbody').append(html);
+                    } else {
+                        isLoadMember = false;
+                        memberPageIndex -= 1;
+                    }
+                }
+            });
+        }
+    });
+</script>

@@ -1,0 +1,78 @@
+﻿@model WebChat.Common.ViewModels.Account.RegisterViewModel
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration _configuration
+@{
+    Layout = "~/Views/Shared/_SignIn-SignUpLayout.cshtml";
+    ViewData["Title"] = "Register";
+}
+
+<!-- Start of Sign Up -->
+<div class="main order-md-2">
+    <div class="start">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="content">
+                    <h1>Đăng kí tài khoản WebChat</h1>
+                    <div class="third-party">
+                        <button class="btn item bg-blue">
+                            <i class="material-icons">pages</i>
+                        </button>
+                        <button class="btn item bg-teal">
+                            <i class="material-icons">party_mode</i>
+                        </button>
+                        <button class="btn item bg-purple">
+                            <i class="material-icons">whatshot</i>
+                        </button>
+                    </div>
+                    <p>or use your email for registration:</p>
+                    <form asp-controller="Account" asp-action="Register" method="post" enctype="multipart/form-data" class="signup">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-parent">
+                            <div class="form-group">
+                                <input type="text" asp-for="Username" class="form-control" placeholder="Tên đăng nhập" autocomplete="off">
+                                <button class="btn icon"><i class="material-icons">person_outline</i></button>
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" asp-for="Email" class="form-control" placeholder="Email" autocomplete="off">
+                                <button class="btn icon"><i class="material-icons">mail_outline</i></button>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" asp-for="Password" class="form-control" placeholder="Mật khẩu">
+                            <button class="btn icon"><i class="material-icons">lock_outline</i></button>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" asp-for="PasswordConfirm" class="form-control" placeholder="Xác nhận mật khẩu">
+                            <button class="btn icon"><i class="material-icons">lock_outline</i></button>
+                            <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="g-recaptcha" data-sitekey="@(_configuration.GetValue<string>("ReCaptcha:ClientKey"))"></div>
+                        </div>
+                        <button type="submit" class="btn button">Đăng kí</button>
+                        <div class="callout">
+                            <span>Bạn đã có tài khoản? <a asp-action="Login" asp-controller="Account">Đăng nhập ngay</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Sign Up -->
+<!-- Start of Sidebar -->
+<div class="aside order-md-1">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="preference">
+                <h2>Welcome Back!</h2>
+                <p>To keep connected with your friends please login with your personal info.</p>
+                <a asp-action="Login" asp-controller="Account" class="btn button">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Sidebar -->

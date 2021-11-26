@@ -1,0 +1,65 @@
+﻿@model WebChat.Common.ViewModels.User.UserViewModel
+
+<form asp-action="UpdateProfile" asp-controller="User" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="field">
+        <input type="hidden" asp-for="Id" class="form-control">
+    </div>
+    <div class="upload">
+        <div class="data">
+            <img class="avatar-xl" id="image-upload-preview" src="@Model.AvatarLink" alt="avatar">
+            <label>
+                <input type="file" asp-for="File" id="input-file" accept=".jpg, .png, .gif, .jpeg">
+                <span class="btn button">Upload avatar</span>
+            </label>
+        </div>
+        <p>Chúng tôi hỗ trợ loại ảnh là .jpg, .png, .gif, .jpeg</p>
+    </div>
+    <div class="parent">
+        <div class="field">
+            <label for="firstName">Tên</label>
+            <input type="text" asp-for="FirstName" id="first-name" class="form-control" placeholder="Tên">
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="field">
+            <label for="lastName">Họ</label>
+            <input type="text" asp-for="LastName" id="last-name" class="form-control" placeholder="Họ">
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="field">
+        <label for="phone">Email (<span>read only</span>)</label>
+        <input type="email" asp-for="Email" id="email-profile" class="form-control" placeholder="Email" readonly />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="field">
+        <label for="phone">Điện thoại</label>
+        <input type="tel" asp-for="Phone" id="phone-number" class="form-control" placeholder="Số điện thoại" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="field">
+        <label for="location">Địa chỉ</label>
+        <input type="text" asp-for="Address" id="address" class="form-control" placeholder="Địa chỉ">
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+    <a asp-action="ChangePassword" asp-controller="User" asp-route-id="@Model.Id" class="btn btn-link w-100">Đổi mật khẩu</a>
+    <button type="submit" id="btn-update-profile" class="btn button w-100">Lưu thay đổi</button>
+</form>
+
+<script>
+    // Preview upload image
+    $('#input-file').off("change").on("change", function () {
+        readURL(this);
+    });
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#image-upload-preview').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        };
+    };
+
+</script>
