@@ -1,0 +1,17 @@
+D:\Document\Repos\WebChat\WebChat.Service\bin\Debug\netcoreapp3.1\WebChat.Service.deps.json
+D:\Document\Repos\WebChat\WebChat.Service\bin\Debug\netcoreapp3.1\WebChat.Service.dll
+D:\Document\Repos\WebChat\WebChat.Service\bin\Debug\netcoreapp3.1\WebChat.Service.pdb
+D:\Document\Repos\WebChat\WebChat.Service\bin\Debug\netcoreapp3.1\WebChat.Common.dll
+D:\Document\Repos\WebChat\WebChat.Service\bin\Debug\netcoreapp3.1\WebChat.DataAccess.dll
+D:\Document\Repos\WebChat\WebChat.Service\bin\Debug\netcoreapp3.1\WebChat.Entities.dll
+D:\Document\Repos\WebChat\WebChat.Service\bin\Debug\netcoreapp3.1\WebChat.Common.pdb
+D:\Document\Repos\WebChat\WebChat.Service\bin\Debug\netcoreapp3.1\WebChat.DataAccess.pdb
+D:\Document\Repos\WebChat\WebChat.Service\bin\Debug\netcoreapp3.1\WebChat.Entities.pdb
+D:\Document\Repos\WebChat\WebChat.Service\obj\Debug\netcoreapp3.1\WebChat.Service.csproj.AssemblyReference.cache
+D:\Document\Repos\WebChat\WebChat.Service\obj\Debug\netcoreapp3.1\WebChat.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Document\Repos\WebChat\WebChat.Service\obj\Debug\netcoreapp3.1\WebChat.Service.AssemblyInfoInputs.cache
+D:\Document\Repos\WebChat\WebChat.Service\obj\Debug\netcoreapp3.1\WebChat.Service.AssemblyInfo.cs
+D:\Document\Repos\WebChat\WebChat.Service\obj\Debug\netcoreapp3.1\WebChat.Service.csproj.CoreCompileInputs.cache
+D:\Document\Repos\WebChat\WebChat.Service\obj\Debug\netcoreapp3.1\WebChat.Service.csproj.CopyComplete
+D:\Document\Repos\WebChat\WebChat.Service\obj\Debug\netcoreapp3.1\WebChat.Service.dll
+D:\Document\Repos\WebChat\WebChat.Service\obj\Debug\netcoreapp3.1\WebChat.Service.pdb

@@ -1,0 +1,570 @@
+2021-11-26T16:01:52.6755339+07:00  [INF] User profile is available. Using '"C:\Users\nguye\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2021-11-26T16:01:54.1903088+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-11-26T16:01:54.1965129+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-11-26T16:01:54.1995326+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-11-26T16:01:54.2022302+07:00  [INF] Content root path: "D:\Document\Repos\WebChat\WebChat" (b5d60022)
+2021-11-26T16:01:54.6961807+07:00 0HMDGNDI9M5O1:00000001 [INF] Request starting HTTP/2 GET https://localhost:5001/   (ca22a1cb)
+2021-11-26T16:01:54.8038045+07:00 0HMDGNDI9M5O1:00000001 [INF] Authorization failed. (b15dd539)
+2021-11-26T16:01:54.8277583+07:00 0HMDGNDI9M5O1:00000001 [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2021-11-26T16:01:54.8357758+07:00 0HMDGNDI9M5O1:00000001 [INF] Request finished in 145.7802ms 302  (791a596a)
+2021-11-26T16:01:54.8564310+07:00 0HMDGNDI9M5O1:00000003 [INF] Request starting HTTP/2 GET https://localhost:5001/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2021-11-26T16:01:54.9752621+07:00 0HMDGNDI9M5O1:00000003 [INF] Executing endpoint '"WebChat.WebApp.Controllers.AccountController.Login (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:01:55.0639484+07:00 0HMDGNDI9M5O1:00000003 [INF] Route matched with "{action = \"Login\", controller = \"Account\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Login()" on controller "WebChat.WebApp.Controllers.AccountController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:01:55.6972221+07:00 0HMDGNDI9M5O1:00000003 [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2021-11-26T16:01:56.0799575+07:00 0HMDGNDI9M5O1:00000003 [INF] Executed ViewResult - view "Login" executed in 419.5458ms. (f66409e9)
+2021-11-26T16:01:56.0805681+07:00 0HMDGNDI9M5O1:00000003 [INF] Executed action "WebChat.WebApp.Controllers.AccountController.Login (WebChat.WebApp)" in 1015.8468ms (afa2e885)
+2021-11-26T16:01:56.0806503+07:00 0HMDGNDI9M5O1:00000003 [INF] Executed endpoint '"WebChat.WebApp.Controllers.AccountController.Login (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:01:56.0863624+07:00 0HMDGNDI9M5O1:00000003 [INF] Request finished in 1229.8754ms 200 text/html; charset=utf-8 (791a596a)
+2021-11-26T16:01:56.0986523+07:00 0HMDGNDI9M5O1:00000007 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/css/swipe.min.css   (ca22a1cb)
+2021-11-26T16:01:56.0988031+07:00 0HMDGNDI9M5O1:00000009 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/js/jquery.min.js   (ca22a1cb)
+2021-11-26T16:01:56.0998501+07:00 0HMDGNDI9M5O1:00000005 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/css/lib/bootstrap.min.css   (ca22a1cb)
+2021-11-26T16:01:56.0998576+07:00 0HMDGNDI9M5O1:0000000B [INF] Request starting HTTP/2 GET https://localhost:5001/dist/js/vendor/popper.min.js   (ca22a1cb)
+2021-11-26T16:01:56.1008176+07:00 0HMDGNDI9M5O1:0000000D [INF] Request starting HTTP/2 GET https://localhost:5001/dist/js/bootstrap.min.js   (ca22a1cb)
+2021-11-26T16:01:56.1008547+07:00 0HMDGNDI9M5O1:0000000F [INF] Request starting HTTP/2 GET https://localhost:5001/_content/AspNetCoreHero.ToastNotification/notyf.min.css   (ca22a1cb)
+2021-11-26T16:01:56.1012279+07:00 0HMDGNDI9M5O1:00000011 [INF] Request starting HTTP/2 GET https://localhost:5001/_content/AspNetCoreHero.ToastNotification/notyf.min.js   (ca22a1cb)
+2021-11-26T16:01:56.1245995+07:00 0HMDGNDI9M5O1:0000000F [INF] Sending file. Request path: '"/_content/AspNetCoreHero.ToastNotification/notyf.min.css"'. Physical path: '"C:\Users\nguye\.nuget\packages\aspnetcorehero.toastnotification\1.1.0\staticwebassets\notyf.min.css"' (27b0a520)
+2021-11-26T16:01:56.1246355+07:00 0HMDGNDI9M5O1:0000000B [INF] Sending file. Request path: '"/dist/js/vendor/popper.min.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\js\vendor\popper.min.js"' (27b0a520)
+2021-11-26T16:01:56.1245890+07:00 0HMDGNDI9M5O1:00000011 [INF] Sending file. Request path: '"/_content/AspNetCoreHero.ToastNotification/notyf.min.js"'. Physical path: '"C:\Users\nguye\.nuget\packages\aspnetcorehero.toastnotification\1.1.0\staticwebassets\notyf.min.js"' (27b0a520)
+2021-11-26T16:01:56.1248810+07:00 0HMDGNDI9M5O1:0000000B [INF] Request finished in 25.107ms 200 application/javascript (791a596a)
+2021-11-26T16:01:56.1248833+07:00 0HMDGNDI9M5O1:0000000F [INF] Request finished in 23.9858ms 200 text/css (791a596a)
+2021-11-26T16:01:56.1248833+07:00 0HMDGNDI9M5O1:00000011 [INF] Request finished in 23.7467ms 200 application/javascript (791a596a)
+2021-11-26T16:01:56.1262801+07:00 0HMDGNDI9M5O1:00000005 [INF] Sending file. Request path: '"/dist/css/lib/bootstrap.min.css"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\css\lib\bootstrap.min.css"' (27b0a520)
+2021-11-26T16:01:56.1263376+07:00 0HMDGNDI9M5O1:0000000D [INF] Sending file. Request path: '"/dist/js/bootstrap.min.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\js\bootstrap.min.js"' (27b0a520)
+2021-11-26T16:01:56.1264048+07:00 0HMDGNDI9M5O1:00000007 [INF] Sending file. Request path: '"/dist/css/swipe.min.css"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\css\swipe.min.css"' (27b0a520)
+2021-11-26T16:01:56.1277813+07:00 0HMDGNDI9M5O1:00000009 [INF] Sending file. Request path: '"/dist/js/jquery.min.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\js\jquery.min.js"' (27b0a520)
+2021-11-26T16:01:56.1306527+07:00 0HMDGNDI9M5O1:00000007 [INF] Request finished in 32.493ms 200 text/css (791a596a)
+2021-11-26T16:01:56.1306491+07:00 0HMDGNDI9M5O1:00000009 [INF] Request finished in 32.4694ms 200 application/javascript (791a596a)
+2021-11-26T16:01:56.1313126+07:00 0HMDGNDI9M5O1:0000000D [INF] Request finished in 30.798ms 200 application/javascript (791a596a)
+2021-11-26T16:01:56.1313470+07:00 0HMDGNDI9M5O1:00000005 [INF] Request finished in 33.0871ms 200 text/css (791a596a)
+2021-11-26T16:01:56.2305280+07:00 0HMDGNDI9M5O1:00000013 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/fonts/circular/CircularStd-Black.woff   (ca22a1cb)
+2021-11-26T16:01:56.2307402+07:00 0HMDGNDI9M5O1:00000015 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/fonts/material/MaterialIcons-Regular.woff2   (ca22a1cb)
+2021-11-26T16:01:56.2309545+07:00 0HMDGNDI9M5O1:00000017 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/fonts/circular/CircularStd-Book.woff   (ca22a1cb)
+2021-11-26T16:01:56.2315336+07:00 0HMDGNDI9M5O1:00000019 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/fonts/circular/CircularStd-Medium.woff   (ca22a1cb)
+2021-11-26T16:01:56.2355251+07:00 0HMDGNDI9M5O1:00000017 [INF] Sending file. Request path: '"/dist/fonts/circular/CircularStd-Book.woff"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\fonts\circular\CircularStd-Book.woff"' (27b0a520)
+2021-11-26T16:01:56.2381451+07:00 0HMDGNDI9M5O1:00000013 [INF] Sending file. Request path: '"/dist/fonts/circular/CircularStd-Black.woff"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\fonts\circular\CircularStd-Black.woff"' (27b0a520)
+2021-11-26T16:01:56.2381677+07:00 0HMDGNDI9M5O1:00000017 [INF] Request finished in 7.119ms 200 application/font-woff (791a596a)
+2021-11-26T16:01:56.2384020+07:00 0HMDGNDI9M5O1:00000013 [INF] Request finished in 8.9342ms 200 application/font-woff (791a596a)
+2021-11-26T16:01:56.2398287+07:00 0HMDGNDI9M5O1:00000019 [INF] Sending file. Request path: '"/dist/fonts/circular/CircularStd-Medium.woff"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\fonts\circular\CircularStd-Medium.woff"' (27b0a520)
+2021-11-26T16:01:56.2400725+07:00 0HMDGNDI9M5O1:00000019 [INF] Request finished in 8.8306ms 200 application/font-woff (791a596a)
+2021-11-26T16:01:56.2438822+07:00 0HMDGNDI9M5O1:00000015 [INF] Sending file. Request path: '"/dist/fonts/material/MaterialIcons-Regular.woff2"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\fonts\material\MaterialIcons-Regular.woff2"' (27b0a520)
+2021-11-26T16:01:56.2440821+07:00 0HMDGNDI9M5O1:00000015 [INF] Request finished in 13.4501ms 200 font/woff2 (791a596a)
+2021-11-26T16:01:56.8769140+07:00 0HMDGNDI9M5O1:0000001B [INF] Request starting HTTP/2 GET https://localhost:5001/dist/img/favicon.png   (ca22a1cb)
+2021-11-26T16:01:56.8814083+07:00 0HMDGNDI9M5O1:0000001B [INF] Sending file. Request path: '"/dist/img/favicon.png"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\img\favicon.png"' (27b0a520)
+2021-11-26T16:01:56.8823021+07:00 0HMDGNDI9M5O1:0000001B [INF] Request finished in 5.6129ms 200 image/png (791a596a)
+2021-11-26T16:02:04.2663704+07:00 0HMDGNDI9M5O1:0000001D [INF] Request starting HTTP/2 POST https://localhost:5001/dang-nhap application/x-www-form-urlencoded 216 (ca22a1cb)
+2021-11-26T16:02:04.2694849+07:00 0HMDGNDI9M5O1:0000001D [INF] Executing endpoint '"WebChat.WebApp.Controllers.AccountController.Login (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:04.2823501+07:00 0HMDGNDI9M5O1:0000001D [INF] Route matched with "{action = \"Login\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(WebChat.Common.ViewModels.Account.LoginViewModel)" on controller "WebChat.WebApp.Controllers.AccountController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:05.1226921+07:00 0HMDGNDI9M5O1:0000001D [WRN] The 'bool' property '"Status"' on entity type '"Role"' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. (a2a8ca4b)
+2021-11-26T16:02:05.1257829+07:00 0HMDGNDI9M5O1:0000001D [WRN] The 'bool' property '"Status"' on entity type '"User"' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. (a2a8ca4b)
+2021-11-26T16:02:05.2291967+07:00 0HMDGNDI9M5O1:0000001D [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:05.9547878+07:00 0HMDGNDI9M5O1:0000001D [INF] Executed DbCommand ("40"ms) [Parameters=["@__model_Username_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__model_Username_0) AND ([u].[IsLocked] = CAST(1 AS bit))" (0723d8ff)
+2021-11-26T16:02:06.0092665+07:00 0HMDGNDI9M5O1:0000001D [INF] Executed DbCommand ("14"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2021-11-26T16:02:06.1807140+07:00 0HMDGNDI9M5O1:0000001D [INF] Executed DbCommand ("9"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0" (0723d8ff)
+2021-11-26T16:02:06.2168926+07:00 0HMDGNDI9M5O1:0000001D [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE ([u].[Discriminator] = N'UserRole') AND ([u].[UserId] = @__userId_0)" (0723d8ff)
+2021-11-26T16:02:06.2231353+07:00 0HMDGNDI9M5O1:0000001D [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2021-11-26T16:02:06.2309307+07:00 0HMDGNDI9M5O1:0000001D [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2021-11-26T16:02:06.2385152+07:00 0HMDGNDI9M5O1:0000001D [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__userId_0" (0723d8ff)
+2021-11-26T16:02:06.3419222+07:00 0HMDGNDI9M5O1:0000001D [INF] Executed DbCommand ("9"ms) [Parameters=["@p22='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 200), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (Size = 200), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (Size = 200), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (DbType = Boolean), @p21='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [AccessFailedCount] = @p0, [Address] = @p1, [AvatarLink] = @p2, [ConcurrencyStamp] = @p3, [DateCreate] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [FirstName] = @p7, [IsAdmin] = @p8, [IsLocked] = @p9, [LastName] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [PasswordHash] = @p15, [PhoneNumber] = @p16, [PhoneNumberConfirmed] = @p17, [SecurityStamp] = @p18, [Status] = @p19, [TwoFactorEnabled] = @p20, [UserName] = @p21
+WHERE [Id] = @p22;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2021-11-26T16:02:06.3575191+07:00 0HMDGNDI9M5O1:0000001D [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[ConnectionId], [u].[CreatedAt], [u].[IPAddress], [u].[LastModifyAt], [u].[UserId]
+FROM [UserConnections] AS [u]
+WHERE [u].[UserId] = @__userId_0" (0723d8ff)
+2021-11-26T16:02:06.3614852+07:00 0HMDGNDI9M5O1:0000001D [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2021-11-26T16:02:06.3622844+07:00 0HMDGNDI9M5O1:0000001D [INF] Executed action "WebChat.WebApp.Controllers.AccountController.Login (WebChat.WebApp)" in 2079.862ms (afa2e885)
+2021-11-26T16:02:06.3626263+07:00 0HMDGNDI9M5O1:0000001D [INF] Executed endpoint '"WebChat.WebApp.Controllers.AccountController.Login (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:06.3641653+07:00 0HMDGNDI9M5O1:0000001D [INF] Session started; Key:"c76540dc-d8e6-8c3e-8c9e-a675ced37d55", Id:"db350e4c-f0fa-ab2e-2ab1-a77b9aee9759" (1d7cf8c0)
+2021-11-26T16:02:06.3694262+07:00 0HMDGNDI9M5O1:0000001D [INF] Request finished in 2103.7028ms 302  (791a596a)
+2021-11-26T16:02:06.3760477+07:00 0HMDGNDI9M5O1:0000001F [INF] Request starting HTTP/2 GET https://localhost:5001/   (ca22a1cb)
+2021-11-26T16:02:06.3812412+07:00 0HMDGNDI9M5O1:0000001F [INF] Authorization was successful. (0d575a54)
+2021-11-26T16:02:06.3824137+07:00 0HMDGNDI9M5O1:0000001F [INF] Executing endpoint '"WebChat.WebApp.Controllers.HomeController.Index (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:06.3852863+07:00 0HMDGNDI9M5O1:0000001F [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "WebChat.WebApp.Controllers.HomeController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:06.4165352+07:00 0HMDGNDI9M5O1:0000001F [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:06.4285145+07:00 0HMDGNDI9M5O1:0000001F [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__get_Item_0" (0723d8ff)
+2021-11-26T16:02:06.4337393+07:00 0HMDGNDI9M5O1:0000001F [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2021-11-26T16:02:06.4747203+07:00 0HMDGNDI9M5O1:0000001F [INF] Executed ViewResult - view "Index" executed in 43.7188ms. (f66409e9)
+2021-11-26T16:02:06.4749070+07:00 0HMDGNDI9M5O1:0000001F [INF] Executed action "WebChat.WebApp.Controllers.HomeController.Index (WebChat.WebApp)" in 89.5613ms (afa2e885)
+2021-11-26T16:02:06.4749959+07:00 0HMDGNDI9M5O1:0000001F [INF] Executed endpoint '"WebChat.WebApp.Controllers.HomeController.Index (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:06.4755845+07:00 0HMDGNDI9M5O1:0000001F [INF] Request finished in 99.6234ms 200 text/html; charset=utf-8 (791a596a)
+2021-11-26T16:02:06.5175425+07:00 0HMDGNDI9M5O1:00000023 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/plugin/emoji/css/emojionearea.css   (ca22a1cb)
+2021-11-26T16:02:06.5173310+07:00 0HMDGNDI9M5O1:00000021 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/plugin/select2/css/select2.css   (ca22a1cb)
+2021-11-26T16:02:06.5188852+07:00 0HMDGNDI9M5O1:00000025 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/css/custom/my-style.css   (ca22a1cb)
+2021-11-26T16:02:06.5190120+07:00 0HMDGNDI9M5O1:00000027 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/css/custom/preview-group.css   (ca22a1cb)
+2021-11-26T16:02:06.5194826+07:00 0HMDGNDI9M5O1:00000021 [INF] Sending file. Request path: '"/dist/plugin/select2/css/select2.css"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\plugin\select2\css\select2.css"' (27b0a520)
+2021-11-26T16:02:06.5195870+07:00 0HMDGNDI9M5O1:00000025 [INF] Sending file. Request path: '"/dist/css/custom/my-style.css"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\css\custom\my-style.css"' (27b0a520)
+2021-11-26T16:02:06.5196080+07:00 0HMDGNDI9M5O1:00000021 [INF] Request finished in 2.2989ms 200 text/css (791a596a)
+2021-11-26T16:02:06.5196833+07:00 0HMDGNDI9M5O1:00000025 [INF] Request finished in 0.889ms 200 text/css (791a596a)
+2021-11-26T16:02:06.5200861+07:00 0HMDGNDI9M5O1:00000027 [INF] Sending file. Request path: '"/dist/css/custom/preview-group.css"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\css\custom\preview-group.css"' (27b0a520)
+2021-11-26T16:02:06.5202007+07:00 0HMDGNDI9M5O1:00000027 [INF] Request finished in 1.2164ms 200 text/css (791a596a)
+2021-11-26T16:02:06.5212655+07:00 0HMDGNDI9M5O1:00000029 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/js/jquery-ui.js   (ca22a1cb)
+2021-11-26T16:02:06.5222064+07:00 0HMDGNDI9M5O1:0000002B [INF] Request starting HTTP/2 GET https://localhost:5001/dist/plugin/emoji/js/emojionearea.js   (ca22a1cb)
+2021-11-26T16:02:06.5225262+07:00 0HMDGNDI9M5O1:0000002F [INF] Request starting HTTP/2 GET https://localhost:5001/dist/js/signalr/signalr.js   (ca22a1cb)
+2021-11-26T16:02:06.5225328+07:00 0HMDGNDI9M5O1:0000002D [INF] Request starting HTTP/2 GET https://localhost:5001/dist/js/swipe.min.js   (ca22a1cb)
+2021-11-26T16:02:06.5227332+07:00 0HMDGNDI9M5O1:00000031 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/plugin/select2/js/select2.js   (ca22a1cb)
+2021-11-26T16:02:06.5234157+07:00 0HMDGNDI9M5O1:00000033 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/plugin/select2/js/i18n/vi.js   (ca22a1cb)
+2021-11-26T16:02:06.5288184+07:00 0HMDGNDI9M5O1:00000023 [INF] Sending file. Request path: '"/dist/plugin/emoji/css/emojionearea.css"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\plugin\emoji\css\emojionearea.css"' (27b0a520)
+2021-11-26T16:02:06.5292057+07:00 0HMDGNDI9M5O1:00000035 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/js/custom/my-script.js   (ca22a1cb)
+2021-11-26T16:02:06.5394468+07:00 0HMDGNDI9M5O1:00000037 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/js/custom/new-group.js   (ca22a1cb)
+2021-11-26T16:02:06.5394468+07:00 0HMDGNDI9M5O1:00000039 [INF] Request starting HTTP/2 GET https://localhost:5001/dist/js/custom/new-contact.js   (ca22a1cb)
+2021-11-26T16:02:06.5412768+07:00 0HMDGNDI9M5O1:0000003B [INF] Request starting HTTP/2 GET https://localhost:5001/dist/js/custom/utils.js   (ca22a1cb)
+2021-11-26T16:02:06.5416590+07:00 0HMDGNDI9M5O1:0000003D [INF] Request starting HTTP/2 GET https://localhost:5001/user-content/img/avatar-female-3.jpg   (ca22a1cb)
+2021-11-26T16:02:06.5474542+07:00 0HMDGNDI9M5O1:00000035 [INF] Sending file. Request path: '"/dist/js/custom/my-script.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\js\custom\my-script.js"' (27b0a520)
+2021-11-26T16:02:06.5474542+07:00 0HMDGNDI9M5O1:00000033 [INF] Sending file. Request path: '"/dist/plugin/select2/js/i18n/vi.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\plugin\select2\js\i18n\vi.js"' (27b0a520)
+2021-11-26T16:02:06.5476322+07:00 0HMDGNDI9M5O1:0000003B [INF] Sending file. Request path: '"/dist/js/custom/utils.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\js\custom\utils.js"' (27b0a520)
+2021-11-26T16:02:06.5477426+07:00 0HMDGNDI9M5O1:0000003D [INF] Sending file. Request path: '"/user-content/img/avatar-female-3.jpg"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\user-content\img\avatar-female-3.jpg"' (27b0a520)
+2021-11-26T16:02:06.5477638+07:00 0HMDGNDI9M5O1:00000033 [INF] Request finished in 24.424ms 200 application/javascript (791a596a)
+2021-11-26T16:02:06.5478050+07:00 0HMDGNDI9M5O1:00000039 [INF] Sending file. Request path: '"/dist/js/custom/new-contact.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\js\custom\new-contact.js"' (27b0a520)
+2021-11-26T16:02:06.5478689+07:00 0HMDGNDI9M5O1:0000003D [INF] Request finished in 6.4493ms 200 image/jpeg (791a596a)
+2021-11-26T16:02:06.5478962+07:00 0HMDGNDI9M5O1:00000037 [INF] Sending file. Request path: '"/dist/js/custom/new-group.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\js\custom\new-group.js"' (27b0a520)
+2021-11-26T16:02:06.5479096+07:00 0HMDGNDI9M5O1:00000039 [INF] Request finished in 8.6165ms 200 application/javascript (791a596a)
+2021-11-26T16:02:06.5479373+07:00 0HMDGNDI9M5O1:00000035 [INF] Request finished in 18.7651ms 200 application/javascript (791a596a)
+2021-11-26T16:02:06.5479696+07:00 0HMDGNDI9M5O1:0000003B [INF] Request finished in 6.9878ms 200 application/javascript (791a596a)
+2021-11-26T16:02:06.5479959+07:00 0HMDGNDI9M5O1:00000037 [INF] Request finished in 8.7017ms 200 application/javascript (791a596a)
+2021-11-26T16:02:06.5480185+07:00 0HMDGNDI9M5O1:00000023 [INF] Request finished in 30.4998ms 200 text/css (791a596a)
+2021-11-26T16:02:06.5487206+07:00 0HMDGNDI9M5O1:0000002D [INF] Sending file. Request path: '"/dist/js/swipe.min.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\js\swipe.min.js"' (27b0a520)
+2021-11-26T16:02:06.5525955+07:00 0HMDGNDI9M5O1:0000002D [INF] Request finished in 30.0178ms 200 application/javascript (791a596a)
+2021-11-26T16:02:06.5546287+07:00 0HMDGNDI9M5O1:0000002B [INF] Sending file. Request path: '"/dist/plugin/emoji/js/emojionearea.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\plugin\emoji\js\emojionearea.js"' (27b0a520)
+2021-11-26T16:02:06.5548545+07:00 0HMDGNDI9M5O1:0000002B [INF] Request finished in 32.6561ms 200 application/javascript (791a596a)
+2021-11-26T16:02:06.5557491+07:00 0HMDGNDI9M5O1:00000031 [INF] Sending file. Request path: '"/dist/plugin/select2/js/select2.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\plugin\select2\js\select2.js"' (27b0a520)
+2021-11-26T16:02:06.5559486+07:00 0HMDGNDI9M5O1:00000031 [INF] Request finished in 33.2092ms 200 application/javascript (791a596a)
+2021-11-26T16:02:06.5564382+07:00 0HMDGNDI9M5O1:0000002F [INF] Sending file. Request path: '"/dist/js/signalr/signalr.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\js\signalr\signalr.js"' (27b0a520)
+2021-11-26T16:02:06.5567944+07:00 0HMDGNDI9M5O1:0000002F [INF] Request finished in 34.1817ms 200 application/javascript (791a596a)
+2021-11-26T16:02:06.5606841+07:00 0HMDGNDI9M5O1:00000029 [INF] Sending file. Request path: '"/dist/js/jquery-ui.js"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\dist\js\jquery-ui.js"' (27b0a520)
+2021-11-26T16:02:06.5611201+07:00 0HMDGNDI9M5O1:00000029 [INF] Request finished in 39.8042ms 200 application/javascript (791a596a)
+2021-11-26T16:02:06.6903786+07:00 0HMDGNDI9M5O1:0000003F [INF] Request starting HTTP/2 POST https://localhost:5001/chathub/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0 (ca22a1cb)
+2021-11-26T16:02:06.6964405+07:00 0HMDGNDI9M5O1:0000003F [INF] Executing endpoint '"/chathub/negotiate"' (500cc934)
+2021-11-26T16:02:06.7051672+07:00 0HMDGNDI9M5O1:00000041 [INF] Request starting HTTP/2 GET https://localhost:5001/Discussion/GetListDiscussion   (ca22a1cb)
+2021-11-26T16:02:06.7133743+07:00 0HMDGNDI9M5O1:00000041 [INF] Authorization was successful. (0d575a54)
+2021-11-26T16:02:06.7135580+07:00 0HMDGNDI9M5O1:00000041 [INF] Executing endpoint '"WebChat.WebApp.Controllers.DiscussionController.GetListDiscussion (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:06.7146058+07:00 0HMDGNDI9M5O1:0000003F [INF] Executed endpoint '"/chathub/negotiate"' (99874f2b)
+2021-11-26T16:02:06.7150561+07:00 0HMDGNDI9M5O1:0000003F [INF] Request finished in 25.1912ms 200 application/json (791a596a)
+2021-11-26T16:02:06.7165873+07:00 0HMDGNDI9M5O1:00000041 [INF] Route matched with "{action = \"GetListDiscussion\", controller = \"Discussion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetListDiscussion(System.String)" on controller "WebChat.WebApp.Controllers.DiscussionController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:06.7352896+07:00 0HMDGNDI9M5O1:00000041 [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:06.7386973+07:00 0HMDGNDI9M5O3:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/chathub?id=sUs2UroXkYGqhR3VoNGB4Q   (ca22a1cb)
+2021-11-26T16:02:06.7393613+07:00 0HMDGNDI9M5O3:00000001 [INF] Executing endpoint '"/chathub"' (500cc934)
+2021-11-26T16:02:06.7494139+07:00 0HMDGNDI9M5O1:00000041 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name], [c].[CreatedAt], [c].[AvatarGroup], [u].[GroupId], [c].[OwnerId]
+FROM [ChatGroups] AS [c]
+INNER JOIN [UserInChatGroups] AS [u] ON [c].[Id] = [u].[GroupId]
+WHERE [u].[UserId] = @__userId_0" (0723d8ff)
+2021-11-26T16:02:06.7884217+07:00 0HMDGNDI9M5O1:00000041 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_1='?' (DbType = Guid), @__groupId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Notifications] AS [n]
+INNER JOIN (
+    SELECT [n0].[NotificationId]
+    FROM [NotificationUsers] AS [n0]
+    WHERE ([n0].[ReceiverUserId] = @__userId_1) AND ([n0].[IsRead] <> CAST(1 AS bit))
+) AS [t] ON [n].[Id] = [t].[NotificationId]
+WHERE ([n].[ReceiverGroupId] = @__groupId_0) AND ([n].[TypeNotification] = 1)" (0723d8ff)
+2021-11-26T16:02:06.7908703+07:00 0HMDGNDI9M5O3:00000001 [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:06.7927190+07:00 0HMDGNDI9M5O1:00000041 [INF] Executed DbCommand ("1"ms) [Parameters=["@__groupId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [UserInChatGroups] AS [u]
+WHERE [u].[GroupId] = @__groupId_0" (0723d8ff)
+2021-11-26T16:02:06.7955351+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__model_ConnectionId_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[ConnectionId], [u].[CreatedAt], [u].[IPAddress], [u].[LastModifyAt], [u].[UserId]
+FROM [UserConnections] AS [u]
+WHERE [u].[ConnectionId] = @__model_ConnectionId_0" (0723d8ff)
+2021-11-26T16:02:06.8000095+07:00 0HMDGNDI9M5O1:00000041 [INF] Executed DbCommand ("1"ms) [Parameters=["@__8__locals2_item_GroupId_0='?' (DbType = Guid), @__8__locals1_userId_1='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId]
+FROM [UserInChatGroups] AS [u]
+WHERE ([u].[GroupId] = @__8__locals2_item_GroupId_0) AND ([u].[UserId] <> @__8__locals1_userId_1)" (0723d8ff)
+2021-11-26T16:02:06.8035022+07:00 0HMDGNDI9M5O1:00000041 [INF] Executed DbCommand ("1"ms) [Parameters=["@__anotherUserId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserName], [u].[AvatarLink]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__anotherUserId_0" (0723d8ff)
+2021-11-26T16:02:06.8119944+07:00 0HMDGNDI9M5O1:00000041 [INF] Executed DbCommand ("2"ms) [Parameters=["@__8__locals1_userId_0='?' (DbType = Guid), @__anotherUserId_1='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[IsBlock]
+FROM [Contacts] AS [c]
+WHERE ([c].[UserId] = @__8__locals1_userId_0) AND ([c].[FriendId] = @__anotherUserId_1)" (0723d8ff)
+2021-11-26T16:02:06.8244961+07:00 0HMDGNDI9M5O1:00000041 [INF] Executed DbCommand ("7"ms) [Parameters=["@__item_GroupId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[AttachedFiles], [c].[CallId], [c].[ChatGroupId], [c].[Content], [c].[CreatedAt], [c].[LastModifyAt], [c].[SenderId]
+FROM [ChatLogs] AS [c]
+WHERE [c].[ChatGroupId] = @__item_GroupId_0
+ORDER BY [c].[CreatedAt] DESC" (0723d8ff)
+2021-11-26T16:02:06.8307479+07:00 0HMDGNDI9M5O1:00000041 [INF] Executing PartialViewResult, running view "_ListDiscussions". (1d3d4b21)
+2021-11-26T16:02:06.8371542+07:00 0HMDGNDI9M5O1:00000041 [INF] Executed PartialViewResult - view "_ListDiscussions" executed in 8.7638ms. (6f83ade2)
+2021-11-26T16:02:06.8372453+07:00 0HMDGNDI9M5O1:00000041 [INF] Executed action "WebChat.WebApp.Controllers.DiscussionController.GetListDiscussion (WebChat.WebApp)" in 120.5925ms (afa2e885)
+2021-11-26T16:02:06.8372772+07:00 0HMDGNDI9M5O1:00000041 [INF] Executed endpoint '"WebChat.WebApp.Controllers.DiscussionController.GetListDiscussion (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:06.8374925+07:00 0HMDGNDI9M5O1:00000041 [INF] Request finished in 132.4186ms 200 text/html; charset=utf-8 (791a596a)
+2021-11-26T16:02:06.8440556+07:00 0HMDGNDI9M5O1:00000043 [INF] Request starting HTTP/2 GET https://localhost:5001/user-content/img/avatar-male-1.jpg   (ca22a1cb)
+2021-11-26T16:02:06.8448996+07:00 0HMDGNDI9M5O1:00000043 [INF] Sending file. Request path: '"/user-content/img/avatar-male-1.jpg"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\user-content\img\avatar-male-1.jpg"' (27b0a520)
+2021-11-26T16:02:06.8450111+07:00 0HMDGNDI9M5O1:00000043 [INF] Request finished in 1.0495ms 200 image/jpeg (791a596a)
+2021-11-26T16:02:06.8513826+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [UserConnections] ([ConnectionId], [CreatedAt], [IPAddress], [LastModifyAt], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [UserConnections]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2021-11-26T16:02:08.4311174+07:00 0HMDGNDI9M5O1:00000045 [INF] Request starting HTTP/2 POST https://localhost:5001/Notification/DeleteWhenRead application/x-www-form-urlencoded; charset=UTF-8 44 (ca22a1cb)
+2021-11-26T16:02:08.4320678+07:00 0HMDGNDI9M5O1:00000047 [INF] Request starting HTTP/2 GET https://localhost:5001/Chat/LoadChatForm2?groupId=a6984a2f-6326-459c-8ea7-08d96df7251d&_=1637917326551   (ca22a1cb)
+2021-11-26T16:02:08.4351268+07:00 0HMDGNDI9M5O1:00000047 [INF] Authorization was successful. (0d575a54)
+2021-11-26T16:02:08.4351701+07:00 0HMDGNDI9M5O1:00000045 [INF] Authorization was successful. (0d575a54)
+2021-11-26T16:02:08.4362539+07:00 0HMDGNDI9M5O1:00000047 [INF] Executing endpoint '"WebChat.WebApp.Controllers.ChatController.LoadChatForm2 (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:08.4362973+07:00 0HMDGNDI9M5O1:00000045 [INF] Executing endpoint '"WebChat.WebApp.Controllers.NotificationController.DeleteWhenRead (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:08.4425316+07:00 0HMDGNDI9M5O1:00000045 [INF] Route matched with "{action = \"DeleteWhenRead\", controller = \"Notification\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult DeleteWhenRead(System.Guid)" on controller "WebChat.WebApp.Controllers.NotificationController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:08.4425297+07:00 0HMDGNDI9M5O1:00000047 [INF] Route matched with "{action = \"LoadChatForm2\", controller = \"Chat\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult LoadChatForm2(System.Guid)" on controller "WebChat.WebApp.Controllers.ChatController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:08.4495816+07:00 0HMDGNDI9M5O1:00000045 [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:08.4495817+07:00 0HMDGNDI9M5O1:00000047 [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:08.4564983+07:00 0HMDGNDI9M5O1:00000045 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_1='?' (DbType = Guid), @__groupId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[NotificationId]
+FROM [Notifications] AS [n]
+INNER JOIN (
+    SELECT [n0].[Id], [n0].[NotificationId]
+    FROM [NotificationUsers] AS [n0]
+    WHERE ([n0].[ReceiverUserId] = @__userId_1) AND ([n0].[IsRead] <> CAST(1 AS bit))
+) AS [t] ON [n].[Id] = [t].[NotificationId]
+WHERE ([n].[ReceiverGroupId] = @__groupId_0) AND ([n].[TypeNotification] = 1)" (0723d8ff)
+2021-11-26T16:02:08.4594399+07:00 0HMDGNDI9M5O1:00000047 [INF] Executed DbCommand ("1"ms) [Parameters=["@__groupId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[AvatarGroup], [c].[CreatedAt], [c].[LastModifyAt], [c].[Name], [c].[OwnerId]
+FROM [ChatGroups] AS [c]
+WHERE [c].[Id] = @__groupId_0" (0723d8ff)
+2021-11-26T16:02:08.4604175+07:00 0HMDGNDI9M5O1:00000045 [INF] Executing JsonResult, writing value of type '"System.Boolean"'. (2f513669)
+2021-11-26T16:02:08.4674227+07:00 0HMDGNDI9M5O1:00000045 [INF] Executed action "WebChat.WebApp.Controllers.NotificationController.DeleteWhenRead (WebChat.WebApp)" in 24.7188ms (afa2e885)
+2021-11-26T16:02:08.4674735+07:00 0HMDGNDI9M5O1:00000045 [INF] Executed endpoint '"WebChat.WebApp.Controllers.NotificationController.DeleteWhenRead (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:08.4677575+07:00 0HMDGNDI9M5O1:00000045 [INF] Request finished in 37.111ms 200 application/json; charset=utf-8 (791a596a)
+2021-11-26T16:02:08.4799679+07:00 0HMDGNDI9M5O1:00000047 [INF] Executed DbCommand ("0"ms) [Parameters=["@__groupId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [UserInChatGroups] AS [u]
+WHERE [u].[GroupId] = @__groupId_0" (0723d8ff)
+2021-11-26T16:02:08.4831023+07:00 0HMDGNDI9M5O1:00000047 [INF] Executed DbCommand ("1"ms) [Parameters=["@__8__locals1_groupId_0='?' (DbType = Guid), @__8__locals1_userId_1='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId]
+FROM [UserInChatGroups] AS [u]
+WHERE ([u].[GroupId] = @__8__locals1_groupId_0) AND ([u].[UserId] <> @__8__locals1_userId_1)" (0723d8ff)
+2021-11-26T16:02:08.4853484+07:00 0HMDGNDI9M5O1:00000047 [INF] Executed DbCommand ("0"ms) [Parameters=["@__anotherUserId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserName], [u].[AvatarLink]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__anotherUserId_0" (0723d8ff)
+2021-11-26T16:02:08.4882523+07:00 0HMDGNDI9M5O1:00000047 [INF] Executed DbCommand ("1"ms) [Parameters=["@__anotherUserId_0='?' (DbType = Guid), @__8__locals1_userId_1='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[IsBlock]
+FROM [Contacts] AS [c]
+WHERE ([c].[UserId] = @__anotherUserId_0) AND ([c].[FriendId] = @__8__locals1_userId_1)" (0723d8ff)
+2021-11-26T16:02:08.5137982+07:00 0HMDGNDI9M5O1:00000047 [INF] Executed DbCommand ("3"ms) [Parameters=["@__groupId_0='?' (DbType = Guid), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[AttachedFiles], [c].[CallId], [c].[ChatGroupId], [c].[Content], [c].[Id], [c].[SenderId], [c].[CreatedAt], [u].[AvatarLink], [u].[UserName], CASE
+    WHEN [c].[AttachedFiles] IS NOT NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+FROM [ChatLogs] AS [c]
+INNER JOIN [Users] AS [u] ON [c].[SenderId] = [u].[Id]
+WHERE [c].[ChatGroupId] = @__groupId_0
+ORDER BY [c].[CreatedAt] DESC
+OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY" (0723d8ff)
+2021-11-26T16:02:08.5187357+07:00 0HMDGNDI9M5O1:00000047 [INF] Executing PartialViewResult, running view "_ChatForm". (1d3d4b21)
+2021-11-26T16:02:08.5244135+07:00 0HMDGNDI9M5O1:00000047 [INF] Executed PartialViewResult - view "_ChatForm" executed in 9.947ms. (6f83ade2)
+2021-11-26T16:02:08.5244813+07:00 0HMDGNDI9M5O1:00000047 [INF] Executed action "WebChat.WebApp.Controllers.ChatController.LoadChatForm2 (WebChat.WebApp)" in 81.8129ms (afa2e885)
+2021-11-26T16:02:08.5245066+07:00 0HMDGNDI9M5O1:00000047 [INF] Executed endpoint '"WebChat.WebApp.Controllers.ChatController.LoadChatForm2 (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:08.5246953+07:00 0HMDGNDI9M5O1:00000047 [INF] Request finished in 92.896ms 200 text/html; charset=utf-8 (791a596a)
+2021-11-26T16:02:13.4944007+07:00 0HMDGNDI9M5O3:00000001 [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:13.4961622+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__groupId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[AvatarGroup], [c].[CreatedAt], [c].[LastModifyAt], [c].[Name], [c].[OwnerId]
+FROM [ChatGroups] AS [c]
+WHERE [c].[Id] = @__groupId_0" (0723d8ff)
+2021-11-26T16:02:13.4971759+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__groupId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [UserInChatGroups] AS [u]
+WHERE [u].[GroupId] = @__groupId_0" (0723d8ff)
+2021-11-26T16:02:13.4978459+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__8__locals1_groupId_0='?' (DbType = Guid), @__8__locals1_userId_1='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId]
+FROM [UserInChatGroups] AS [u]
+WHERE ([u].[GroupId] = @__8__locals1_groupId_0) AND ([u].[UserId] <> @__8__locals1_userId_1)" (0723d8ff)
+2021-11-26T16:02:13.4990133+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__anotherUserId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserName], [u].[AvatarLink]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__anotherUserId_0" (0723d8ff)
+2021-11-26T16:02:13.4996376+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__anotherUserId_0='?' (DbType = Guid), @__8__locals1_userId_1='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[IsBlock]
+FROM [Contacts] AS [c]
+WHERE ([c].[UserId] = @__anotherUserId_0) AND ([c].[FriendId] = @__8__locals1_userId_1)" (0723d8ff)
+2021-11-26T16:02:13.5062431+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0" (0723d8ff)
+2021-11-26T16:02:13.5113866+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__groupId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId]
+FROM [UserInChatGroups] AS [u]
+WHERE [u].[GroupId] = @__groupId_0" (0723d8ff)
+2021-11-26T16:02:13.5208033+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[ConnectionId]
+FROM [UserConnections] AS [u]
+WHERE [u].[UserId] IN ('b8cfc615-0d44-4e75-9071-6b76bc4a016f', 'e1b62ba2-ea51-4c27-a9f8-7e65901f395a')" (0723d8ff)
+2021-11-26T16:02:13.5703907+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 500), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [ChatLogs] ([AttachedFiles], [CallId], [ChatGroupId], [Content], [CreatedAt], [LastModifyAt], [SenderId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [ChatLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2021-11-26T16:02:13.5796993+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__model_ReceiverGroupId_0='?' (DbType = Guid), @__model_SenderId_1='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId]
+FROM [UserInChatGroups] AS [u]
+WHERE ([u].[GroupId] = @__model_ReceiverGroupId_0) AND ([u].[UserId] <> @__model_SenderId_1)" (0723d8ff)
+2021-11-26T16:02:13.6066911+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (Size = 500), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (Size = 100), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Notifications] ([Content], [CreatedAt], [LastModifyAt], [ReceiverGroupId], [SenderId], [Title], [TypeNotification])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [Notifications]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2021-11-26T16:02:13.6356465+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed DbCommand ("5"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [NotificationUsers] ([CreatedAt], [LastModifyAt], [NotificationId], [ReceiverUserId], [TimeRead])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id], [IsRead]
+FROM [NotificationUsers]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2021-11-26T16:02:17.1007915+07:00 0HMDGNDI9M5O1:00000049 [INF] Request starting HTTP/2 GET https://localhost:5001/Discussion/GetListDiscussion   (ca22a1cb)
+2021-11-26T16:02:17.1042034+07:00 0HMDGNDI9M5O1:00000049 [INF] Authorization was successful. (0d575a54)
+2021-11-26T16:02:17.1043550+07:00 0HMDGNDI9M5O1:00000049 [INF] Executing endpoint '"WebChat.WebApp.Controllers.DiscussionController.GetListDiscussion (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:17.1046556+07:00 0HMDGNDI9M5O1:00000049 [INF] Route matched with "{action = \"GetListDiscussion\", controller = \"Discussion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetListDiscussion(System.String)" on controller "WebChat.WebApp.Controllers.DiscussionController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:17.1057739+07:00 0HMDGNDI9M5O1:00000049 [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:17.1085765+07:00 0HMDGNDI9M5O1:00000049 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name], [c].[CreatedAt], [c].[AvatarGroup], [u].[GroupId], [c].[OwnerId]
+FROM [ChatGroups] AS [c]
+INNER JOIN [UserInChatGroups] AS [u] ON [c].[Id] = [u].[GroupId]
+WHERE [u].[UserId] = @__userId_0" (0723d8ff)
+2021-11-26T16:02:17.1098841+07:00 0HMDGNDI9M5O1:00000049 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_1='?' (DbType = Guid), @__groupId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Notifications] AS [n]
+INNER JOIN (
+    SELECT [n0].[NotificationId]
+    FROM [NotificationUsers] AS [n0]
+    WHERE ([n0].[ReceiverUserId] = @__userId_1) AND ([n0].[IsRead] <> CAST(1 AS bit))
+) AS [t] ON [n].[Id] = [t].[NotificationId]
+WHERE ([n].[ReceiverGroupId] = @__groupId_0) AND ([n].[TypeNotification] = 1)" (0723d8ff)
+2021-11-26T16:02:17.1103954+07:00 0HMDGNDI9M5O1:00000049 [INF] Executed DbCommand ("0"ms) [Parameters=["@__groupId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [UserInChatGroups] AS [u]
+WHERE [u].[GroupId] = @__groupId_0" (0723d8ff)
+2021-11-26T16:02:17.1109931+07:00 0HMDGNDI9M5O1:00000049 [INF] Executed DbCommand ("0"ms) [Parameters=["@__8__locals2_item_GroupId_0='?' (DbType = Guid), @__8__locals1_userId_1='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId]
+FROM [UserInChatGroups] AS [u]
+WHERE ([u].[GroupId] = @__8__locals2_item_GroupId_0) AND ([u].[UserId] <> @__8__locals1_userId_1)" (0723d8ff)
+2021-11-26T16:02:17.1116362+07:00 0HMDGNDI9M5O1:00000049 [INF] Executed DbCommand ("0"ms) [Parameters=["@__anotherUserId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserName], [u].[AvatarLink]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__anotherUserId_0" (0723d8ff)
+2021-11-26T16:02:17.1122565+07:00 0HMDGNDI9M5O1:00000049 [INF] Executed DbCommand ("0"ms) [Parameters=["@__8__locals1_userId_0='?' (DbType = Guid), @__anotherUserId_1='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[IsBlock]
+FROM [Contacts] AS [c]
+WHERE ([c].[UserId] = @__8__locals1_userId_0) AND ([c].[FriendId] = @__anotherUserId_1)" (0723d8ff)
+2021-11-26T16:02:17.1180710+07:00 0HMDGNDI9M5O1:00000049 [INF] Executed DbCommand ("5"ms) [Parameters=["@__item_GroupId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Id], [c].[AttachedFiles], [c].[CallId], [c].[ChatGroupId], [c].[Content], [c].[CreatedAt], [c].[LastModifyAt], [c].[SenderId]
+FROM [ChatLogs] AS [c]
+WHERE [c].[ChatGroupId] = @__item_GroupId_0
+ORDER BY [c].[CreatedAt] DESC" (0723d8ff)
+2021-11-26T16:02:17.1195538+07:00 0HMDGNDI9M5O1:00000049 [INF] Executing PartialViewResult, running view "_ListDiscussions". (1d3d4b21)
+2021-11-26T16:02:17.1209174+07:00 0HMDGNDI9M5O1:00000049 [INF] Executed PartialViewResult - view "_ListDiscussions" executed in 1.5538ms. (6f83ade2)
+2021-11-26T16:02:17.1209759+07:00 0HMDGNDI9M5O1:00000049 [INF] Executed action "WebChat.WebApp.Controllers.DiscussionController.GetListDiscussion (WebChat.WebApp)" in 16.2815ms (afa2e885)
+2021-11-26T16:02:17.1210081+07:00 0HMDGNDI9M5O1:00000049 [INF] Executed endpoint '"WebChat.WebApp.Controllers.DiscussionController.GetListDiscussion (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:17.1213826+07:00 0HMDGNDI9M5O1:00000049 [INF] Request finished in 20.6754ms 200 text/html; charset=utf-8 (791a596a)
+2021-11-26T16:02:20.5649894+07:00 0HMDGNDI9M5O1:0000004B [INF] Request starting HTTP/2 GET https://localhost:5001/Contact/GetListContact   (ca22a1cb)
+2021-11-26T16:02:20.5667620+07:00 0HMDGNDI9M5O1:0000004B [INF] Authorization was successful. (0d575a54)
+2021-11-26T16:02:20.5671311+07:00 0HMDGNDI9M5O1:0000004B [INF] Executing endpoint '"WebChat.WebApp.Controllers.ContactController.GetListContact (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:20.5694291+07:00 0HMDGNDI9M5O1:0000004B [INF] Route matched with "{action = \"GetListContact\", controller = \"Contact\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetListContact(System.String)" on controller "WebChat.WebApp.Controllers.ContactController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:20.5729607+07:00 0HMDGNDI9M5O1:0000004B [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:20.5747694+07:00 0HMDGNDI9M5O1:0000004B [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__userId_0" (0723d8ff)
+2021-11-26T16:02:20.5850937+07:00 0HMDGNDI9M5O1:0000004B [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Address], [u].[Id] AS [ContactId], [u].[AvatarLink], [u].[UserName], [u].[FirstName], [u].[Status], [u].[DateCreate] AS [CreateAt]
+FROM [Users] AS [u]
+INNER JOIN (
+    SELECT [c].[FriendId], [c].[UserId]
+    FROM [Contacts] AS [c]
+    WHERE [c].[IsBlock] <> CAST(1 AS bit)
+) AS [t] ON @__user_Id_0 = [t].[UserId]
+WHERE ([u].[IsLocked] <> CAST(1 AS bit)) AND ([u].[Id] = [t].[FriendId])
+ORDER BY [u].[UserName]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY" (0723d8ff)
+2021-11-26T16:02:20.5892073+07:00 0HMDGNDI9M5O1:0000004B [INF] Executing PartialViewResult, running view "_ListContacts". (1d3d4b21)
+2021-11-26T16:02:20.5941889+07:00 0HMDGNDI9M5O1:0000004B [INF] Executed PartialViewResult - view "_ListContacts" executed in 7.9201ms. (6f83ade2)
+2021-11-26T16:02:20.5942540+07:00 0HMDGNDI9M5O1:0000004B [INF] Executed action "WebChat.WebApp.Controllers.ContactController.GetListContact (WebChat.WebApp)" in 24.7521ms (afa2e885)
+2021-11-26T16:02:20.5942829+07:00 0HMDGNDI9M5O1:0000004B [INF] Executed endpoint '"WebChat.WebApp.Controllers.ContactController.GetListContact (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:20.5946143+07:00 0HMDGNDI9M5O1:0000004B [INF] Request finished in 29.6712ms 200 text/html; charset=utf-8 (791a596a)
+2021-11-26T16:02:22.7621363+07:00 0HMDGNDI9M5O1:0000004D [INF] Request starting HTTP/2 GET https://localhost:5001/Contact/GetListToNewContact?page=1   (ca22a1cb)
+2021-11-26T16:02:22.7676313+07:00 0HMDGNDI9M5O1:0000004D [INF] Authorization was successful. (0d575a54)
+2021-11-26T16:02:22.7678852+07:00 0HMDGNDI9M5O1:0000004D [INF] Executing endpoint '"WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:22.7707720+07:00 0HMDGNDI9M5O1:0000004D [INF] Route matched with "{action = \"GetListToNewContact\", controller = \"Contact\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetListToNewContact(System.String, Int32)" on controller "WebChat.WebApp.Controllers.ContactController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:22.7751509+07:00 0HMDGNDI9M5O1:0000004D [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:22.7766895+07:00 0HMDGNDI9M5O1:0000004D [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__userId_0" (0723d8ff)
+2021-11-26T16:02:22.7806098+07:00 0HMDGNDI9M5O1:0000004D [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[FriendId]
+FROM [Contacts] AS [c]
+WHERE [c].[UserId] = @__user_Id_0" (0723d8ff)
+2021-11-26T16:02:22.7862522+07:00 0HMDGNDI9M5O1:0000004D [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id] AS [ContactId], [u].[AvatarLink], [u].[UserName], [u].[Address]
+FROM [Users] AS [u]
+WHERE (([u].[IsAdmin] <> CAST(1 AS bit)) AND ([u].[IsLocked] <> CAST(1 AS bit))) AND [u].[Id] NOT IN ('b8cfc615-0d44-4e75-9071-6b76bc4a016f', 'e1b62ba2-ea51-4c27-a9f8-7e65901f395a')
+ORDER BY [u].[UserName]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY" (0723d8ff)
+2021-11-26T16:02:22.7865536+07:00 0HMDGNDI9M5O1:0000004D [INF] Executing JsonResult, writing value of type '"System.Collections.Generic.List`1[[WebChat.Common.ViewModels.User.ContactViewModel, WebChat.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (2f513669)
+2021-11-26T16:02:22.7955933+07:00 0HMDGNDI9M5O1:0000004D [INF] Executed action "WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)" in 24.7287ms (afa2e885)
+2021-11-26T16:02:22.7956537+07:00 0HMDGNDI9M5O1:0000004D [INF] Executed endpoint '"WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:22.7960244+07:00 0HMDGNDI9M5O1:0000004D [INF] Request finished in 33.9387ms 200 application/json; charset=utf-8 (791a596a)
+2021-11-26T16:02:22.8084042+07:00 0HMDGNDI9M5O1:00000051 [INF] Request starting HTTP/2 GET https://localhost:5001/user-content/img/avatar-male-2.jpg   (ca22a1cb)
+2021-11-26T16:02:22.8084033+07:00 0HMDGNDI9M5O1:0000004F [INF] Request starting HTTP/2 GET https://localhost:5001/user-content/img/default-avatar.png   (ca22a1cb)
+2021-11-26T16:02:22.8097423+07:00 0HMDGNDI9M5O1:00000051 [INF] Sending file. Request path: '"/user-content/img/avatar-male-2.jpg"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\user-content\img\avatar-male-2.jpg"' (27b0a520)
+2021-11-26T16:02:22.8097329+07:00 0HMDGNDI9M5O1:0000004F [INF] Sending file. Request path: '"/user-content/img/default-avatar.png"'. Physical path: '"D:\Document\Repos\WebChat\WebChat\wwwroot\user-content\img\default-avatar.png"' (27b0a520)
+2021-11-26T16:02:22.8098204+07:00 0HMDGNDI9M5O1:0000004F [INF] Request finished in 1.5262ms 200 image/png (791a596a)
+2021-11-26T16:02:22.8098404+07:00 0HMDGNDI9M5O1:00000051 [INF] Request finished in 1.5176ms 200 image/jpeg (791a596a)
+2021-11-26T16:02:24.4169786+07:00 0HMDGNDI9M5O1:00000053 [INF] Request starting HTTP/2 GET https://localhost:5001/Contact/GetListToNewContact?page=1   (ca22a1cb)
+2021-11-26T16:02:24.4187515+07:00 0HMDGNDI9M5O1:00000053 [INF] Authorization was successful. (0d575a54)
+2021-11-26T16:02:24.4191702+07:00 0HMDGNDI9M5O1:00000053 [INF] Executing endpoint '"WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:24.4195813+07:00 0HMDGNDI9M5O1:00000053 [INF] Route matched with "{action = \"GetListToNewContact\", controller = \"Contact\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetListToNewContact(System.String, Int32)" on controller "WebChat.WebApp.Controllers.ContactController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:24.4220537+07:00 0HMDGNDI9M5O1:00000053 [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:24.4253196+07:00 0HMDGNDI9M5O1:00000053 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__userId_0" (0723d8ff)
+2021-11-26T16:02:24.4266983+07:00 0HMDGNDI9M5O1:00000053 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[FriendId]
+FROM [Contacts] AS [c]
+WHERE [c].[UserId] = @__user_Id_0" (0723d8ff)
+2021-11-26T16:02:24.4287410+07:00 0HMDGNDI9M5O1:00000053 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id] AS [ContactId], [u].[AvatarLink], [u].[UserName], [u].[Address]
+FROM [Users] AS [u]
+WHERE (([u].[IsAdmin] <> CAST(1 AS bit)) AND ([u].[IsLocked] <> CAST(1 AS bit))) AND [u].[Id] NOT IN ('b8cfc615-0d44-4e75-9071-6b76bc4a016f', 'e1b62ba2-ea51-4c27-a9f8-7e65901f395a')
+ORDER BY [u].[UserName]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY" (0723d8ff)
+2021-11-26T16:02:24.4289761+07:00 0HMDGNDI9M5O1:00000053 [INF] Executing JsonResult, writing value of type '"System.Collections.Generic.List`1[[WebChat.Common.ViewModels.User.ContactViewModel, WebChat.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (2f513669)
+2021-11-26T16:02:24.4297757+07:00 0HMDGNDI9M5O1:00000053 [INF] Executed action "WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)" in 10.0693ms (afa2e885)
+2021-11-26T16:02:24.4298145+07:00 0HMDGNDI9M5O1:00000053 [INF] Executed endpoint '"WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:24.4300513+07:00 0HMDGNDI9M5O1:00000053 [INF] Request finished in 13.1577ms 200 application/json; charset=utf-8 (791a596a)
+2021-11-26T16:02:26.0651185+07:00 0HMDGNDI9M5O1:00000055 [INF] Request starting HTTP/2 GET https://localhost:5001/Contact/GetListToNewContact?page=1   (ca22a1cb)
+2021-11-26T16:02:26.0661681+07:00 0HMDGNDI9M5O1:00000055 [INF] Authorization was successful. (0d575a54)
+2021-11-26T16:02:26.0663182+07:00 0HMDGNDI9M5O1:00000055 [INF] Executing endpoint '"WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:26.0664929+07:00 0HMDGNDI9M5O1:00000055 [INF] Route matched with "{action = \"GetListToNewContact\", controller = \"Contact\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetListToNewContact(System.String, Int32)" on controller "WebChat.WebApp.Controllers.ContactController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:26.0677622+07:00 0HMDGNDI9M5O1:00000055 [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:26.0699394+07:00 0HMDGNDI9M5O1:00000055 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__userId_0" (0723d8ff)
+2021-11-26T16:02:26.0728481+07:00 0HMDGNDI9M5O1:00000055 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[FriendId]
+FROM [Contacts] AS [c]
+WHERE [c].[UserId] = @__user_Id_0" (0723d8ff)
+2021-11-26T16:02:26.0771179+07:00 0HMDGNDI9M5O1:00000055 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id] AS [ContactId], [u].[AvatarLink], [u].[UserName], [u].[Address]
+FROM [Users] AS [u]
+WHERE (([u].[IsAdmin] <> CAST(1 AS bit)) AND ([u].[IsLocked] <> CAST(1 AS bit))) AND [u].[Id] NOT IN ('b8cfc615-0d44-4e75-9071-6b76bc4a016f', 'e1b62ba2-ea51-4c27-a9f8-7e65901f395a')
+ORDER BY [u].[UserName]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY" (0723d8ff)
+2021-11-26T16:02:26.0778234+07:00 0HMDGNDI9M5O1:00000055 [INF] Executing JsonResult, writing value of type '"System.Collections.Generic.List`1[[WebChat.Common.ViewModels.User.ContactViewModel, WebChat.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (2f513669)
+2021-11-26T16:02:26.0797732+07:00 0HMDGNDI9M5O1:00000055 [INF] Executed action "WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)" in 13.216ms (afa2e885)
+2021-11-26T16:02:26.0798244+07:00 0HMDGNDI9M5O1:00000055 [INF] Executed endpoint '"WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:26.0802285+07:00 0HMDGNDI9M5O1:00000055 [INF] Request finished in 15.2603ms 200 application/json; charset=utf-8 (791a596a)
+2021-11-26T16:02:26.9604921+07:00 0HMDGNDI9M5O1:00000057 [INF] Request starting HTTP/2 GET https://localhost:5001/Contact/GetListToNewContact?page=2   (ca22a1cb)
+2021-11-26T16:02:26.9615709+07:00 0HMDGNDI9M5O1:00000057 [INF] Authorization was successful. (0d575a54)
+2021-11-26T16:02:26.9617623+07:00 0HMDGNDI9M5O1:00000057 [INF] Executing endpoint '"WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:26.9619393+07:00 0HMDGNDI9M5O1:00000057 [INF] Route matched with "{action = \"GetListToNewContact\", controller = \"Contact\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetListToNewContact(System.String, Int32)" on controller "WebChat.WebApp.Controllers.ContactController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:26.9632768+07:00 0HMDGNDI9M5O1:00000057 [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:26.9647077+07:00 0HMDGNDI9M5O1:00000057 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__userId_0" (0723d8ff)
+2021-11-26T16:02:26.9656589+07:00 0HMDGNDI9M5O1:00000057 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[FriendId]
+FROM [Contacts] AS [c]
+WHERE [c].[UserId] = @__user_Id_0" (0723d8ff)
+2021-11-26T16:02:26.9710922+07:00 0HMDGNDI9M5O1:00000057 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id] AS [ContactId], [u].[AvatarLink], [u].[UserName], [u].[Address]
+FROM [Users] AS [u]
+WHERE (([u].[IsAdmin] <> CAST(1 AS bit)) AND ([u].[IsLocked] <> CAST(1 AS bit))) AND [u].[Id] NOT IN ('b8cfc615-0d44-4e75-9071-6b76bc4a016f', 'e1b62ba2-ea51-4c27-a9f8-7e65901f395a')
+ORDER BY [u].[UserName]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2021-11-26T16:02:26.9713254+07:00 0HMDGNDI9M5O1:00000057 [INF] Executing JsonResult, writing value of type '"System.Collections.Generic.List`1[[WebChat.Common.ViewModels.User.ContactViewModel, WebChat.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (2f513669)
+2021-11-26T16:02:26.9722183+07:00 0HMDGNDI9M5O1:00000057 [INF] Executed action "WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)" in 10.1934ms (afa2e885)
+2021-11-26T16:02:26.9722824+07:00 0HMDGNDI9M5O1:00000057 [INF] Executed endpoint '"WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:26.9726601+07:00 0HMDGNDI9M5O1:00000057 [INF] Request finished in 12.1565ms 200 application/json; charset=utf-8 (791a596a)
+2021-11-26T16:02:27.3278125+07:00 0HMDGNDI9M5O1:00000059 [INF] Request starting HTTP/2 GET https://localhost:5001/Contact/GetListToNewContact?page=3   (ca22a1cb)
+2021-11-26T16:02:27.3286140+07:00 0HMDGNDI9M5O1:00000059 [INF] Authorization was successful. (0d575a54)
+2021-11-26T16:02:27.3286832+07:00 0HMDGNDI9M5O1:00000059 [INF] Executing endpoint '"WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:27.3287454+07:00 0HMDGNDI9M5O1:00000059 [INF] Route matched with "{action = \"GetListToNewContact\", controller = \"Contact\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetListToNewContact(System.String, Int32)" on controller "WebChat.WebApp.Controllers.ContactController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:27.3291924+07:00 0HMDGNDI9M5O1:00000059 [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:27.3297776+07:00 0HMDGNDI9M5O1:00000059 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__userId_0" (0723d8ff)
+2021-11-26T16:02:27.3304170+07:00 0HMDGNDI9M5O1:00000059 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[FriendId]
+FROM [Contacts] AS [c]
+WHERE [c].[UserId] = @__user_Id_0" (0723d8ff)
+2021-11-26T16:02:27.3312798+07:00 0HMDGNDI9M5O1:00000059 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id] AS [ContactId], [u].[AvatarLink], [u].[UserName], [u].[Address]
+FROM [Users] AS [u]
+WHERE (([u].[IsAdmin] <> CAST(1 AS bit)) AND ([u].[IsLocked] <> CAST(1 AS bit))) AND [u].[Id] NOT IN ('b8cfc615-0d44-4e75-9071-6b76bc4a016f', 'e1b62ba2-ea51-4c27-a9f8-7e65901f395a')
+ORDER BY [u].[UserName]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY" (0723d8ff)
+2021-11-26T16:02:27.3313988+07:00 0HMDGNDI9M5O1:00000059 [INF] Executing JsonResult, writing value of type '"System.Collections.Generic.List`1[[WebChat.Common.ViewModels.User.ContactViewModel, WebChat.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (2f513669)
+2021-11-26T16:02:27.3316234+07:00 0HMDGNDI9M5O1:00000059 [INF] Executed action "WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)" in 2.8464ms (afa2e885)
+2021-11-26T16:02:27.3316567+07:00 0HMDGNDI9M5O1:00000059 [INF] Executed endpoint '"WebChat.WebApp.Controllers.ContactController.GetListToNewContact (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:27.3317698+07:00 0HMDGNDI9M5O1:00000059 [INF] Request finished in 3.9953ms 200 application/json; charset=utf-8 (791a596a)
+2021-11-26T16:02:38.2357228+07:00 0HMDGNDI9M5O1:0000005B [INF] Request starting HTTP/2 GET https://localhost:5001/User/Logout   (ca22a1cb)
+2021-11-26T16:02:38.2376440+07:00 0HMDGNDI9M5O1:0000005B [INF] Authorization was successful. (0d575a54)
+2021-11-26T16:02:38.2378004+07:00 0HMDGNDI9M5O1:0000005B [INF] Executing endpoint '"WebChat.WebApp.Controllers.UserController.Logout (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:38.2424891+07:00 0HMDGNDI9M5O1:0000005B [INF] Route matched with "{action = \"Logout\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout()" on controller "WebChat.WebApp.Controllers.UserController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:38.2439806+07:00 0HMDGNDI9M5O1:0000005B [INF] Entity Framework Core "5.0.2" initialized '"WebChatDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-11-26T16:02:38.2453708+07:00 0HMDGNDI9M5O1:0000005B [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Address], [u].[AvatarLink], [u].[ConcurrencyStamp], [u].[DateCreate], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsAdmin], [u].[IsLocked], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__userId_0" (0723d8ff)
+2021-11-26T16:02:38.2473594+07:00 0HMDGNDI9M5O1:0000005B [INF] Executed DbCommand ("1"ms) [Parameters=["@p22='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 200), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (Size = 200), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (Size = 200), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (DbType = Boolean), @p21='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [AccessFailedCount] = @p0, [Address] = @p1, [AvatarLink] = @p2, [ConcurrencyStamp] = @p3, [DateCreate] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [FirstName] = @p7, [IsAdmin] = @p8, [IsLocked] = @p9, [LastName] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [PasswordHash] = @p15, [PhoneNumber] = @p16, [PhoneNumberConfirmed] = @p17, [SecurityStamp] = @p18, [Status] = @p19, [TwoFactorEnabled] = @p20, [UserName] = @p21
+WHERE [Id] = @p22;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2021-11-26T16:02:38.2553367+07:00 0HMDGNDI9M5O1:0000005B [INF] AuthenticationScheme: "Identity.Application" signed out. (d3f50c8d)
+2021-11-26T16:02:38.2561578+07:00 0HMDGNDI9M5O1:0000005B [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2021-11-26T16:02:38.2564356+07:00 0HMDGNDI9M5O1:0000005B [INF] AuthenticationScheme: "Identity.TwoFactorUserId" signed out. (d3f50c8d)
+2021-11-26T16:02:38.2570745+07:00 0HMDGNDI9M5O1:0000005B [INF] Executing RedirectResult, redirecting to "/dang-nhap". (d98d540e)
+2021-11-26T16:02:38.2571872+07:00 0HMDGNDI9M5O1:0000005B [INF] Executed action "WebChat.WebApp.Controllers.UserController.Logout (WebChat.WebApp)" in 14.6349ms (afa2e885)
+2021-11-26T16:02:38.2572115+07:00 0HMDGNDI9M5O1:0000005B [INF] Executed endpoint '"WebChat.WebApp.Controllers.UserController.Logout (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:38.2586874+07:00 0HMDGNDI9M5O1:0000005B [INF] Request finished in 23.0387ms 302  (791a596a)
+2021-11-26T16:02:38.2679602+07:00 0HMDGNDI9M5O1:0000005D [INF] Request starting HTTP/2 GET https://localhost:5001/dang-nhap   (ca22a1cb)
+2021-11-26T16:02:38.2681702+07:00 0HMDGNDI9M5O1:0000005D [INF] Executing endpoint '"WebChat.WebApp.Controllers.AccountController.Login (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:38.2682365+07:00 0HMDGNDI9M5O1:0000005D [INF] Route matched with "{action = \"Login\", controller = \"Account\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Login()" on controller "WebChat.WebApp.Controllers.AccountController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:38.2699111+07:00 0HMDGNDI9M5O1:0000005D [INF] Executing ViewResult, running view "Login". (c83d0e25)
+2021-11-26T16:02:38.2742443+07:00 0HMDGNDI9M5O1:0000005D [INF] Executed ViewResult - view "Login" executed in 4.4032ms. (f66409e9)
+2021-11-26T16:02:38.2743399+07:00 0HMDGNDI9M5O1:0000005D [INF] Executed action "WebChat.WebApp.Controllers.AccountController.Login (WebChat.WebApp)" in 6.0843ms (afa2e885)
+2021-11-26T16:02:38.2743640+07:00 0HMDGNDI9M5O1:0000005D [INF] Executed endpoint '"WebChat.WebApp.Controllers.AccountController.Login (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:38.2745672+07:00 0HMDGNDI9M5O1:0000005D [INF] Request finished in 6.5943ms 200 text/html; charset=utf-8 (791a596a)
+2021-11-26T16:02:38.2955778+07:00 0HMDGNDI9M5O3:00000001 [INF] Executed endpoint '"/chathub"' (99874f2b)
+2021-11-26T16:02:38.2962713+07:00 0HMDGNDI9M5O3:00000001 [INF] Request finished in 31557.5577ms 101  (791a596a)
+2021-11-26T16:02:39.7186884+07:00 0HMDGNDI9M5O1:0000005F [INF] Request starting HTTP/2 GET https://localhost:5001/dang-ky   (ca22a1cb)
+2021-11-26T16:02:39.7192512+07:00 0HMDGNDI9M5O1:0000005F [INF] Executing endpoint '"WebChat.WebApp.Controllers.AccountController.Register (WebChat.WebApp)"' (500cc934)
+2021-11-26T16:02:39.7209466+07:00 0HMDGNDI9M5O1:0000005F [INF] Route matched with "{action = \"Register\", controller = \"Account\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Register()" on controller "WebChat.WebApp.Controllers.AccountController" ("WebChat.WebApp"). (122b2fdf)
+2021-11-26T16:02:39.7262236+07:00 0HMDGNDI9M5O1:0000005F [INF] Executing ViewResult, running view "Register". (c83d0e25)
+2021-11-26T16:02:39.7461063+07:00 0HMDGNDI9M5O1:0000005F [INF] Executed ViewResult - view "Register" executed in 24.0017ms. (f66409e9)
+2021-11-26T16:02:39.7461599+07:00 0HMDGNDI9M5O1:0000005F [INF] Executed action "WebChat.WebApp.Controllers.AccountController.Register (WebChat.WebApp)" in 25.1736ms (afa2e885)
+2021-11-26T16:02:39.7461779+07:00 0HMDGNDI9M5O1:0000005F [INF] Executed endpoint '"WebChat.WebApp.Controllers.AccountController.Register (WebChat.WebApp)"' (99874f2b)
+2021-11-26T16:02:39.7464145+07:00 0HMDGNDI9M5O1:0000005F [INF] Request finished in 27.6975ms 200 text/html; charset=utf-8 (791a596a)

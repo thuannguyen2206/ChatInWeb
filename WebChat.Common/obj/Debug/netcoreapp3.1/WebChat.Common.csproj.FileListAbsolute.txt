@@ -1,0 +1,10 @@
+D:\Document\Repos\WebChat\WebChat.Common\bin\Debug\netcoreapp3.1\WebChat.Common.deps.json
+D:\Document\Repos\WebChat\WebChat.Common\bin\Debug\netcoreapp3.1\WebChat.Common.dll
+D:\Document\Repos\WebChat\WebChat.Common\bin\Debug\netcoreapp3.1\WebChat.Common.pdb
+D:\Document\Repos\WebChat\WebChat.Common\obj\Debug\netcoreapp3.1\WebChat.Common.csproj.AssemblyReference.cache
+D:\Document\Repos\WebChat\WebChat.Common\obj\Debug\netcoreapp3.1\WebChat.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Document\Repos\WebChat\WebChat.Common\obj\Debug\netcoreapp3.1\WebChat.Common.AssemblyInfoInputs.cache
+D:\Document\Repos\WebChat\WebChat.Common\obj\Debug\netcoreapp3.1\WebChat.Common.AssemblyInfo.cs
+D:\Document\Repos\WebChat\WebChat.Common\obj\Debug\netcoreapp3.1\WebChat.Common.csproj.CoreCompileInputs.cache
+D:\Document\Repos\WebChat\WebChat.Common\obj\Debug\netcoreapp3.1\WebChat.Common.dll
+D:\Document\Repos\WebChat\WebChat.Common\obj\Debug\netcoreapp3.1\WebChat.Common.pdb

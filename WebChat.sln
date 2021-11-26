@@ -24,8 +24,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebChat.Service", "WebChat.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebChat.Common", "WebChat.Common\WebChat.Common.csproj", "{B394C88B-73ED-49E3-A151-A467C4BA0C46}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebChat.AdminApp", "WebChat.AdminApp\WebChat.AdminApp.csproj", "{72F34C3C-0531-47A7-8D6F-F49286671600}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
